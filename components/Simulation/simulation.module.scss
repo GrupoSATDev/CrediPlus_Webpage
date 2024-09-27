@@ -1,0 +1,95 @@
+.simulation {
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+  
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    &__form{
+      padding: 20px;
+      border-radius: 10px;
+      background-color: white;
+    }
+  
+    &__input {
+      margin-bottom: 20px;
+  
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+  
+      input[type='range'] {
+        width: 100%;
+      }
+  
+      &__amountDisplay,
+      &__daysDisplay {
+        font-size: 1.25rem;
+        margin-top: 10px;
+      }
+    }
+  
+    &__result {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 8px;
+       .totalText{
+        font-family: 'Inter', sans-serif;
+        font-weight: 800;
+        color: #535353;
+      }
+      .total {
+        font-size: 1.5rem;
+        color: #ff6600;
+      }
+  
+      button {
+        background-color: #ff6600;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+  
+      button:hover {
+        background-color: #e65c00;
+      }
+    }
+  
+    &__costs {
+      margin-top: 20px;
+      background-color: #DBE6F0;
+      padding: 20px;
+      border-radius: 8px;
+  
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+      }
+  
+      &__costItem {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 1rem;
+  
+        &.simulation__total {
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  
