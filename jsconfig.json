@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": false,
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/styles/*": ["styles/*"],
+      "@/db/*": ["server/db/*"],
+      "@/utils/*": ["utils/*"],
+      "@/server/*": ["server/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist", ".next", ".cache", "bundles", "out"]
+}
