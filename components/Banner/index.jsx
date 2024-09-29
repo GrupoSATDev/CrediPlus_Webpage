@@ -18,16 +18,19 @@ const Banner = () => {
         />
       </picture>
       <div className={top.content}>
-        <div className={top.text}>
-          <h1 className={top.text0}>Crédito</h1>
-          <h1 className={top.text1}>100%</h1>
-          <h1 className={top.text2}>en línea</h1>
+        <div className={top.captionHome}>
+          <h1 className={top.title}>
+            <span className={top.title1}>Crédito</span>
+            <span className={top.title2}>100%</span>
+            <span className={top.title3}>en línea</span>
+          </h1>
+          <Link href="/#" passHref>
+            <button className={top.button}>Instalar App</button>
+          </Link>
         </div>
-        <Link href="/#" passHref>
-          <button className={top.button}>Instalar App</button>
-        </Link>
+        
         <div className={top.contentText}>
-          <p>En <b>Crediplus</b> cuentas con el crédito en línea <b>más confiable, ágil y adaptable del mercado.</b></p>
+          <p>En <strong>Crediplus</strong> cuentas con el crédito en línea <strong>más confiable, ágil y adaptable del mercado.</strong></p>
         </div>
         <div className={top.contentSimulation}>
           <Simulation />

@@ -1,17 +1,14 @@
 @import '@/styles/vars.scss';
 
 .main {
+    width: 100%;
     height: 100vh;
     background-size:cover;
     background-position: center bottom;
     display: grid;
     align-items: center;
     justify-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 70%;
-    color: #A0A19E;
-    background-color: #969692;
+    position: relative;
 }
 
 .main :global(.img-fluid) {
@@ -19,44 +16,29 @@
     height: auto; 
     object-fit: cover;
 }
-
-.content {
-    display: flex;
+ .content {
     position: absolute;
-    align-items: center;
+    top: 8rem;
+    display: flex;
     flex-direction: column;
 }
-
-.contentText {
+.captionHome{
     display: grid;
-    // justify-content: center;
-    font-size: 19px;
+    grid-row-gap: 24rem;
     text-align: center;
-    color: $gray;
-    margin: 30px 30px;
-
-    & p {
-        margin: 0;
-    }
 }
-
-.text {
-    display: flex;
-    font-family: 'Inter', sans-serif;
-    column-gap: 0.4rem;
+.title{
+    font-family: 'Inter', sans-serif;  
     font-weight: 800;
-    color: white;
-    font-size: 5vw;
-    margin-bottom: 24rem;
-    &p {
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.455);
-        margin: 0;
-    }
+    font-size: 33px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.218);
 }
-.text2 {
+.title2{
+    margin: 0 5px;
+}
+.title3{
     color: #FFA800;
 }
-
 .button {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -76,83 +58,100 @@
         color: $main-color;
     }
 }
+.contentText{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5rem;
+    margin: 40px 30px;
+    text-align: center;
+    color: #393939;
+    & strong {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        font-size: 20px;
 
+    }
+
+}
 .contentSimulation{
-    flex-direction: column;
-
+    padding: 0 20px;
 }
+// .contentSimulation{
+//     background: #9e9e99;
+// }
 
-/* Media Queries */
-@media (min-width: 768px) {
-    .text {
-        font-size: 8vw; 
-    }
+// /* Media Queries */
+// @media (min-width: 768px) {
+//     .text {
+//         font-size: 8vw; 
+//     }
 
-    .text1 {
-        font-size: 10vw; 
-    }
+//     .text1 {
+//         font-size: 10vw; 
+//     }
 
-    .button {
-        font-size: 1.5rem;
-    }
-}
+//     .button {
+//         font-size: 1.5rem;
+//     }
+// }
 
-@media (min-width: 992px) {
-    .main {
-        height: 495px;
-        margin-bottom: 3rem;
-    }
+// @media (min-width: 992px) {
+//     .main {
+//         height: 495px;
+//         margin-bottom: 3rem;
+//     }
     
-    .text {
-        font-size: 6vw; 
-    }
+//     .text {
+//         font-size: 6vw; 
+//     }
 
-    .text1 {
-        font-size: 8vw; 
-    }
+//     .text1 {
+//         font-size: 8vw; 
+//     }
 
-    .contentText {
-        bottom: 1rem;
-    }
-}
+//     .contentText {
+//         bottom: 1rem;
+//     }
+// }
 
-@media (min-width: 1200px) {
-    .main {
-        height: 600px;
-    }
+// @media (min-width: 1200px) {
+//     .main {
+//         height: 600px;
+//     }
 
-    .text {
-        font-size: 2.5vw; 
-    }
+//     .text {
+//         font-size: 2.5vw; 
+//     }
 
-    .text1 {
-        font-size: 5vw; 
-    }
+//     .text1 {
+//         font-size: 5vw; 
+//     }
 
-    .button {
-        font-size:1vw;
-    }
+//     .button {
+//         font-size:1vw;
+//     }
 
-    .contentText {
-        font-size: 1.2vw;
-        bottom: 0rem;
-    }
-}
+//     .contentText {
+//         font-size: 1.2vw;
+//         bottom: 0rem;
+//     }
+// }
 
-@media (min-width: 1700px) {
-    .main {
-        height: 825px;
-    }
+// @media (min-width: 1700px) {
+//     .main {
+//         height: 825px;
+//     }
 
-    .text {
-        font-size: 4vw;
-    }
+//     .text {
+//         font-size: 4vw;
+//     }
 
-    .text1 {
-        font-size: 5vw;
-    }
+//     .text1 {
+//         font-size: 5vw;
+//     }
 
-    .contentText {
-        bottom: 1rem;
-    }
-}
+//     .contentText {
+//         bottom: 1rem;
+//     }
+// }

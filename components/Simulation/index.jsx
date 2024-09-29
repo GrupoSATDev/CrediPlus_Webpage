@@ -34,6 +34,7 @@ const Simulation = () => {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
           />
+          <div>$100 000</div>
           <div className={styles.simulation__amountDisplay}>${amount}</div>
         </div>
         <div className={styles.simulation__input}>
@@ -46,9 +47,10 @@ const Simulation = () => {
             value={days}
             onChange={(e) => setDays(e.target.value)}
           />
+          <div>5 Días</div>
           <div className={styles.simulation__daysDisplay}>{days} Días</div>
         </div>
-
+        <hr />
         <div className={styles.simulation__result}>
           <p className={styles.totalText}>Total a pagar: <span className={styles.total}>${total}</span></p>
           <p span className={styles.note}>
