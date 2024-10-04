@@ -10,7 +10,7 @@
   padding: 1.5rem 1rem;
 }
 .floating .headerTransparent{
-  background-color: #325a8f8a !important;
+  background-color: #0808088a !important;
   filter: blur(.5)
 }
 .content {
@@ -23,9 +23,7 @@
   height: 50px;
   z-index: 999;
 }
-.icon, .logo{
-  filter: brightness(15);
-}
+
 .navbar_collapse {
   position: absolute;
   top: 5rem;
@@ -191,9 +189,6 @@
     background: transparent;
     box-shadow: none;
     background: linear-gradient(180deg, rgba(0, 0, 0, .8), transparent);
-    .icon, .logo{
-      filter: brightness(15) !important;
-    }
     .navLink{
       color: #fff !important;
       border-color: transparent;

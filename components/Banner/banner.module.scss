@@ -8,12 +8,13 @@
     align-items: center;
     justify-items: center;
     position: relative;
+    background-color: #959692;
 }
 
 .main :global(.img-fluid) {
-    max-width: 100%;
-    height: auto; 
+    width: 100%;
     object-fit: cover;
+    bottom: auto;
 }
  .content {
     position: absolute;

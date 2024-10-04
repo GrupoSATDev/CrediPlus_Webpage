@@ -1,5 +1,5 @@
 import Header from '@/components/Header';
-// import Footer from '@/components/Footer';
+import Footer from '@/components/Footer';
 // import ButtonBook from '@/components/ButtonBook';
 
 const Layout = ({ children }) => {
@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <>
       <Header />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

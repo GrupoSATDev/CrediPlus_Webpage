@@ -1,0 +1,123 @@
+@import '@/styles/vars.scss';
+
+.loan{
+    background-color: #E8E8E8;
+}
+.container{
+    display: grid;
+    row-gap: 2rem;
+    padding: 4rem 0;
+    text-align: center;
+    & h2{
+        font-family: $font-secondary;
+        font-weight: 350;
+        font-size: 28px;
+        line-height: 2rem;
+        color: $main-color;
+        margin: 0 1rem;
+    }
+    & p{
+        color: #535353;
+        font-weight: 500;
+        padding: 0 1rem;
+        font-size: 18px;
+        line-height: 1.8rem;
+    }
+    & h3{
+        font-weight: 800;
+        font-size: 23px;
+        margin: 3rem 0 1.5rem;
+    }
+}
+
+.text{
+    display: grid;
+    row-gap: 2rem;
+    background-color: $light-blue;
+    margin: 0 1rem;
+    padding: 3rem 0;
+    border-radius: 10px;
+    & p{
+        color: #fff !important;
+
+    }
+}
+.cards {
+    overflow: hidden;
+    margin: 0 50px;
+    ul {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      padding: 0;
+      row-gap: 2rem;
+      list-style: none;
+      width: 100%;
+    }
+  
+    li {
+      background: #D9D9D9;
+      padding: 2rem;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      min-width: 100%;
+      text-align: center;
+      height: 300px;
+      img {
+        margin: 1rem;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        margin-top: 1rem;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  
+    span {
+      width: 10px;
+      height: 10px;
+      background-color: #ccc;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    .active {
+      background-color: $main-color; 
+    }
+  }
+  
+//   @media screen and (max-width: 768px) {
+//     .cards ul {
+//       display: flex;
+//       transition: transform 0.5s ease-in-out;
+//     }
+  
+//     .cards li {
+//       min-width: 100%; 
+//     }
+//   }
+  
+//   @media screen and (min-width: 768px) {
+//     .cards ul {
+//       display: grid;
+//       grid-template-columns: repeat(4, 1fr);
+//       gap: 2rem; 
+//     }
+  
+//     .cards li {
+//       min-width: auto; 
+//     }
+  
+//     .dots {
+//       display: none;
+//     }
+//   }

@@ -1,0 +1,50 @@
+@import '@/styles/vars.scss';
+
+.footer{
+    grid-area: footer;
+    background: $footer-color;
+    & a{
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+.main{
+    display: grid;
+    row-gap: 3rem;
+    padding: 3rem 2rem 7rem ;
+    color: #fff;
+}
+.logo{
+    display: grid;
+    justify-content: center;
+    row-gap: 2rem;
+}
+.circle{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    column-gap: 1rem;
+    justify-items: center;
+    justify-content: center;
+}
+
+.button {
+    display: grid;
+    justify-content: center;
+    & a{       
+        font-weight: 600;
+        font-size: 4vw;
+        letter-spacing: 1px;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        background-color: $second-color;
+        color: $footer-color;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    &:hover {
+        background-color: white;
+        color: $main-color;
+    }
+}

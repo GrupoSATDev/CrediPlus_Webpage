@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "grommet": "^2.40.1",
+    "grommet-icons": "^4.12.1",
     "next": "14.2.13",
     "prop-types": "^15.8.1",
     "react": "^18",
     "react-dom": "^18",
     "react-redux": "^9.1.2",
     "redux": "^5.0.1",
-    "sass": "^1.79.3"
+    "sass": "^1.79.3",
+    "styled-components": "^6.1.13"
   }
 }
