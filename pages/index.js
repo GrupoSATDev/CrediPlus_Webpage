@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css";
 import Banner from "@/components/Banner";
 import CountOnUs from "@/components/CountOnUs";
 import Loan from "@/components/LoanRequirements";
+import Partners from "@/components/Partners";
 import Layout from "@/components/Layout";
 
 
@@ -32,6 +33,7 @@ export default function Home() {
       <Banner />
       <CountOnUs />
       <Loan />
+      <Partners />
     </Layout>
     </>
   );

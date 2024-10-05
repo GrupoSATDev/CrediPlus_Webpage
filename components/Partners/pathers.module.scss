@@ -1,0 +1,39 @@
+@import '@/styles/vars.scss';
+
+.main{
+    margin: 0 2rem;
+    text-align: center;
+    margin: 5rem 1rem;
+    & h2{
+        font-family: $font-secondary;
+        font-weight: 800;
+        font-size: 1.7rem;
+        color: $main-color;
+    }
+    & span{
+        color: $light-blue;
+    }
+}
+.container{
+    margin-top: 2rem;
+    display: grid;
+    grid-row-gap: 2rem;
+    grid-template-areas:
+    "item1 item2"
+    "item3 item4";
+    & img{
+        width: 95%;
+    }
+}
+.item1{
+    grid-area: item1;
+}
+.item2{
+    grid-area: item2;
+}
+.item3{
+    grid-area: item3;
+}
+.item4{
+    grid-area: item4;
+}
