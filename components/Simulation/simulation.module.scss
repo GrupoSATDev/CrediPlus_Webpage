@@ -8,6 +8,7 @@
       font-size: 1.5rem;
       color: black;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     &__form{
@@ -26,7 +27,16 @@
         font-size: 1rem;
         text-align: left;
       }
-  
+      .amount{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      .days{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+      }
       input[type='range'] {
         width: 100%;
       }
@@ -40,13 +50,18 @@
   
     &__result {
       margin-top: 20px;
-      border-radius: 8px;
+      
+      .total{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
        .totalText{
         font-family: 'Inter', sans-serif;
         font-weight: 800;
         color: #535353;
       }
-      .total {
+      .totalNumber {
         font-size: 1.5rem;
         color: #ff6600;
       }
@@ -90,4 +105,12 @@
       }
     }
   }
-  
+  @media (min-width: 992px){
+    .simulation {
+      position: relative;
+      top: -24rem;
+      left: 25rem;
+      max-width: 500px;
+    }
+
+  }

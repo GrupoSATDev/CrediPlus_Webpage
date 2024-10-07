@@ -34,8 +34,10 @@ const Simulation = () => {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
           />
-          <div>$100 000</div>
-          <div className={styles.simulation__amountDisplay}>${amount}</div>
+          <div className={styles.amount}>
+            <div><span>$100 000</span></div>
+            <div className={styles.simulation__amountDisplay}><span>${amount}</span></div>
+          </div>
         </div>
         <div className={styles.simulation__input}>
           <label>¿Cuándo puedes pagarlo?</label>
@@ -47,12 +49,17 @@ const Simulation = () => {
             value={days}
             onChange={(e) => setDays(e.target.value)}
           />
-          <div>5 Días</div>
-          <div className={styles.simulation__daysDisplay}>{days} Días</div>
+          <div className={styles.days}> 
+            <div><span>5 Días</span></div>
+            <div className={styles.simulation__daysDisplay}><span>{days} Días</span></div>
+          </div>
         </div>
         <hr />
         <div className={styles.simulation__result}>
-          <p className={styles.totalText}>Total a pagar: <span className={styles.total}>${total}</span></p>
+          <div className={styles.total}>
+            <div><span className={styles.totalText}>Total a pagar: </span></div>
+            <div><span className={styles.totalNumber}>${total}</span></div>
+          </div>
           <p span className={styles.note}>
             Este valor corresponde a una simulación de tu credito segun los datos seleccionados por ti. 
             Recuerda que el <b>Aval y la firma electronica son opcionales</b> y puedes elegir no incluirlos al momento de firmar tu crédito. 

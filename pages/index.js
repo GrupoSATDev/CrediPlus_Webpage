@@ -6,6 +6,7 @@ import Banner from "@/components/Banner";
 import CountOnUs from "@/components/CountOnUs";
 import Loan from "@/components/LoanRequirements";
 import Partners from "@/components/Partners";
+import Benefits from "@/components/Benefits";
 import Layout from "@/components/Layout";
 
 
@@ -34,6 +35,7 @@ export default function Home() {
       <CountOnUs />
       <Loan />
       <Partners />
+      <Benefits />
     </Layout>
     </>
   );

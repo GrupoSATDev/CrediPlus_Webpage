@@ -78,9 +78,28 @@
 .contentSimulation{
     padding: 0 20px;
 }
-// .contentSimulation{
-//     background: #9e9e99;
-// }
+
+@media (min-width: 992px){
+    .captionHome{
+        row-gap: 1rem;
+    }
+    .title{
+        display: grid;
+        line-height: 4rem;
+        font-size: 4vw;
+    }
+    .title2{
+        font-size: 5vw;
+    }
+    .button{
+        font-size: 16px;
+    }
+    .contentText{
+        position: relative;
+        top: 17rem;   
+        left: -10rem;     
+    }
+}
 
 // /* Media Queries */
 // @media (min-width: 768px) {
