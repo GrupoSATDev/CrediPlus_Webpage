@@ -19,7 +19,27 @@
 
     }
 }
-
+.main :global(.dCAbUr){
+    font-weight: 700;
+    font-size: 20px !important;
+    line-height: 25px !important;
+    color: #0BD3FF !important;
+}
+.main :global(.ACYRQ){
+    font-weight: 700;
+    font-size: 20px !important;
+    line-height: 25px !important;
+    font-size: 18px;
+}
+.main :global(.bhFQAJ){
+    padding: 1rem 0;
+    line-height: 1.6rem;
+    font-weight: 600;
+}
+.main :global(.egHdhy){
+    border-bottom: solid 2px #fff !important;
+    margin-bottom: 2rem;
+}
 .benefits{
     display: grid;
     justify-items: center;
@@ -35,6 +55,7 @@
 .accordion{
     display: grid;
     grid-row-gap: 1rem;
+    padding: 0 1rem;
     & svg{
         stroke: #0BD3FF !important;
     }

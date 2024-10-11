@@ -5,22 +5,6 @@ import styles from './footer.module.scss';
 import Link from 'next/link';
 
 const Footer = () => {
-    const [activeIndex, setActiveIndex] = useState([]);
-
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth >= 768) {
-                setActiveIndex([0]); 
-            } else {
-                setActiveIndex([]);
-            }
-        };
-
-        handleResize();
-
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     return (
         <footer className={styles.footer}>
@@ -36,7 +20,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className={styles.info}>
-                    <Accordion activeIndex={activeIndex}>
+                    <Accordion>
                         <AccordionPanel className={styles.label} label="+ INFORMACIÓN ÚTIL">
                             <Box>
                                 <ul>
@@ -66,7 +50,7 @@ const Footer = () => {
                     </Accordion>
                 </div>
                 <div className={styles.count}>
-                    <Accordion activeIndex={activeIndex}>
+                    <Accordion>
                         <AccordionPanel className={styles.label} label="+ MI CUENTA" >
                             <Box>
                                 <ul>
@@ -101,7 +85,7 @@ const Footer = () => {
                     </Accordion>
                 </div>
                 <div className={styles.button}>
-                    <a href='#'>SOLICITAR PRÉSTAMO</a>
+                    <a href='/#'>SOLICITAR PRÉSTAMO</a>
                 </div>
             </div>
         </footer>
