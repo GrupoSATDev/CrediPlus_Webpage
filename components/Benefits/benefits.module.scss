@@ -1,62 +1,73 @@
-@import '@/styles/vars.scss';
+@import "@/styles/vars.scss";
 
-.main{
+.main {
+  width: 100%;
+  height: auto;
+  display: grid;
+  justify-content: center;
+  color: #fff;
+  padding: 5rem 1rem;
+  row-gap: 2rem;
+  background: linear-gradient(123deg, #162683 0%, #1a3ea9 50%, #2865d9 100%);
+  & h2 {
+    text-align: center;
+    font-family: $font-secondary;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    font-weight: 500;
+    margin: 0 2rem;
+  }
+}
+.main :global(.dCAbUr) {
+  font-weight: 700;
+  font-size: 20px !important;
+  line-height: 25px !important;
+  color: #0bd3ff !important;
+}
+.main :global(.ACYRQ) {
+  font-weight: 700;
+  font-size: 20px !important;
+  line-height: 25px !important;
+  font-size: 18px;
+}
+.main :global(.bhFQAJ) {
+  padding: 1rem 0;
+  line-height: 1.6rem;
+  font-weight: 600;
+}
+.main :global(.egHdhy) {
+  border-bottom: solid 2px #fff !important;
+  margin-bottom: 2rem;
+}
+.benefits {
+  display: grid;
+  justify-items: center;
+  & img {
     width: 100%;
-    height: auto;
-    display: grid;
-    justify-content: center;
-    color: #fff;
-    padding: 5rem 1rem;
-    row-gap: 2rem;
-    background: linear-gradient(123deg, #162683 0%, #1A3EA9 50%, #2865D9 100%);
-    & h2{
-        text-align: center;
-        font-family: $font-secondary;
-        font-size: 2rem;
-        line-height: 2.3rem;
-        font-weight: 500;
-        margin: 0 2rem;
-
-    }
-}
-.main :global(.dCAbUr){
-    font-weight: 700;
-    font-size: 20px !important;
-    line-height: 25px !important;
-    color: #0BD3FF !important;
-}
-.main :global(.ACYRQ){
-    font-weight: 700;
-    font-size: 20px !important;
-    line-height: 25px !important;
-    font-size: 18px;
-}
-.main :global(.bhFQAJ){
-    padding: 1rem 0;
-    line-height: 1.6rem;
-    font-weight: 600;
-}
-.main :global(.egHdhy){
-    border-bottom: solid 2px #fff !important;
-    margin-bottom: 2rem;
-}
-.benefits{
-    display: grid;
-    justify-items: center;
-    & img{
-        width:100%;
-    }
+  }
 }
 
-.jvxuhm{
-
-    stroke: #0BD3FF !important;
+.jvxuhm {
+  stroke: #0bd3ff !important;
 }
-.accordion{
+.accordion {
+  display: grid;
+  grid-row-gap: 1rem;
+  padding: 0 1rem;
+  & svg {
+    stroke: #0bd3ff !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    // background-image: url(./images/bgweb.png);
+    background-size: cover;
+    width: 100%;
     display: grid;
-    grid-row-gap: 1rem;
-    padding: 0 1rem;
-    & svg{
-        stroke: #0BD3FF !important;
-    }
+    align-items: center;
+    grid-template-columns: repeat(2, auto);
+    & img {
+        width: 70%;
+      }
+  }
 }
