@@ -1,5 +1,7 @@
 import styles from './count-on-us.module.scss';
 import countImg from './images/credi-plus.png';
+import vector1 from './images/mas1.png';
+import vector2 from './images/mas2.png';
 import logo from './images/logo.png';
 
 const countOnUs = () => {    
@@ -19,6 +21,9 @@ const countOnUs = () => {
             <div className={styles.imageLogo}>
                 <img src={logo.src} alt="" />
             </div>
+            <img src={vector1.src} className={styles.vector1} alt="" />
+            <img src={vector2.src} className={styles.vector2} alt="" />
+            <img src={vector1.src} className={styles.vector3} alt="" />
         </section>
     )
 }

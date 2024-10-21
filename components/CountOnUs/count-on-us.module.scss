@@ -1,101 +1,133 @@
-@import '@/styles/vars.scss';
+@import "@/styles/vars.scss";
 
-.main{
+.main {
+  height: 100vh;
+  background-image: url("./images/bg-home.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: grid;
+  grid-row-gap: 2.5rem;
+}
+
+.image {
+  img {
     width: 100%;
-    background-size:cover;
-    background-image: url('./images/bg-home.jpg');
-    display: grid;
-    grid-row-gap: 2.5rem;
+    height: auto;
+    padding: 50px 20px 0;
+  }
 }
-
-.image{   
-    img{
-        width: 100%;
-        height: auto;
-        padding: 50px 20px 0;
-    }
+.contentText {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0 20px;
+  padding: 60px 30px;
+  border-radius: 20px;
+  text-align: center;
+  & h2 {
+    font-family: $font-secondary;
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  & p {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.7rem;
+    margin-bottom: 50px;
+  }
+  & a {
+    font-weight: 600;
+    border: 3px solid $light-blue;
+    border-radius: 10px;
+    color: $dark-blue;
+    padding: 0.3rem 4rem;
+  }
+  & strong {
+    color: $light-blue;
+  }
+  .text1 {
+    color: $dark-blue;
+  }
+  .text2 {
+    color: $light-blue;
+  }
 }
-.contentText{
-    background-color: rgba(255, 255, 255, 0.8);
-    margin: 0 20px;
-    padding: 60px 30px;
-    border-radius: 20px;
-    text-align: center;
-    & h2{
-        font-family: $font-secondary;
-        font-weight: 800;
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-    & p{
-        font-weight: 500;
-        font-size: 17px;
-        line-height: 1.7rem;
-        margin-bottom: 50px;
-    }
-    & a{
-        font-weight: 600;
-        border: 3px solid $light-blue;
-        border-radius: 10px;
-        color: $dark-blue;
-        padding: 0.3rem 4rem;
-    }
-    & strong{
-        color: $light-blue;
-    }
-    .text1{
-        color: $dark-blue;
-    }
-    .text2{
-        color: $light-blue;
-    }
-}
-.imageLogo{
-    padding: 0 20px;
-    margin-bottom: 5rem;
-    display: flex;
-    justify-content: center;
-    img{
-        width: 80%;
-        height: auto;
-        
-    }
+.imageLogo {
+  padding: 0 20px;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 80%;
+    height: auto;
+  }
 }
 
 @media (min-width: 1200px) {
-    .main{
-        grid-template-columns: 1fr 1fr;
-        background-position: center; /* Centra la imagen */
-    }
-    .contentText{
-        padding: 3rem 5rem;
-        margin: 5rem 10rem;
-        width: 600px;
-        height: 630px;
-        & h2{
-            font-size: 30px;
-        }
-        & p{
-            font-size: 14px;
-            text-align: justify;
-        }
-        & a{
-            font-size: 16px;
-        }
-    }
-    
+  .main {
+    height: 90vh;
+    row-gap: 0;
+    grid-template-columns: 70% 30%;
+    margin-bottom: 0;
+    grid-template-rows: 80% 10%;
     .image {
-        position: absolute;
-        right: 20px;
-        & img {
-            width: 320px;
-        }
+      grid-column: 2/3;
+      grid-row: 1/2;
+      justify-self: end;
+
+      & img {
+        width: 230px;
+        padding: 0;
+        margin: 2rem 1rem;
+      }
     }
-    .imageLogo{
-        align-items: flex-end;
-        margin-left: 18rem;
-        img{
-            width: 80%;
-        }
+    .contentText {
+      grid-column: 1/2;
+      grid-row: 1/3;
+      justify-self: start;
+      width: 500px;
+      height: 460px;
+      padding: 60px;
+      margin: 60px;
+      & h2 {
+        font-size: 20px;
+        margin-bottom: 1rem;
+      }
+      & p {
+        font-size: 12px;
+        margin-bottom: 30px;
+        text-align: justify;
+        line-height: 1.2rem;
+      }
+      & a {
+        font-size: 12px;
+      }
     }
+    .imageLogo {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      margin-bottom: 0;
+      justify-self: end;
+      & img {
+        width: 250px;
+      }
+    }
+    .vector1{
+        position: relative;
+        bottom: 20px;
+        left: 1.2rem;
+        width: 110px;
+    }
+    .vector2{
+        position: relative;
+        bottom: 110px;
+        right: 54rem;        
+        width: 90px;
+    }
+    .vector3{
+        position: relative;
+        bottom: 25rem;
+        left: 71rem;
+        width: 110px;
+    }
+  }
 }

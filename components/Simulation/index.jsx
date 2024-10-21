@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styles from './simulation.module.scss';
+import React, { useState } from "react";
+import styles from "./simulation.module.scss";
 
 const Simulation = () => {
   const [amount, setAmount] = useState(250000);
@@ -21,86 +21,104 @@ const Simulation = () => {
   ).toFixed(2);
 
   return (
-    <div className={styles.simulation}>
-      <div className={styles.simulation__form}>
-        <h2>CALCULA TU CRÉDITO ONLINE</h2>
-        <div className={styles.simulation__input}>
-          <label>¿Cuánto dinero necesitas?</label>
-          <input
-            type="range"
-            min="100000"
-            max="1000000"
-            step="10000"
-            value={amount}
-            onChange={(e) => setAmount(e.target.value)}
-          />
-          <div className={styles.amount}>
-            <div><span>$100 000</span></div>
-            <div className={styles.simulation__amountDisplay}><span>${amount}</span></div>
+    <div className={styles.main}>
+      <div className={styles.simulation}>
+        <div className={styles.simulation__form}>
+          <h2>CALCULA TU CRÉDITO ONLINE</h2>
+          <div className={styles.simulation__input}>
+            <label>¿Cuánto dinero necesitas?</label>
+            <input
+              type="range"
+              min="100000"
+              max="1000000"
+              step="10000"
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
+            />
+            <div className={styles.amount}>
+              <div>
+                <span>$100 000</span>
+              </div>
+              <div className={styles.simulation__amountDisplay}>
+                <span>${amount}</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className={styles.simulation__input}>
-          <label>¿Cuándo puedes pagarlo?</label>
-          <input
-            type="range"
-            min="5"
-            max="150"
-            step="1"
-            value={days}
-            onChange={(e) => setDays(e.target.value)}
-          />
-          <div className={styles.days}> 
-            <div><span>5 Días</span></div>
-            <div className={styles.simulation__daysDisplay}><span>{days} Días</span></div>
+          <div className={styles.simulation__input}>
+            <label>¿Cuándo puedes pagarlo?</label>
+            <input
+              type="range"
+              min="5"
+              max="150"
+              step="1"
+              value={days}
+              onChange={(e) => setDays(e.target.value)}
+            />
+            <div className={styles.days}>
+              <div>
+                <span>5 Días</span>
+              </div>
+              <div className={styles.simulation__daysDisplay}>
+                <span>{days} Días</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <hr />
-        <div className={styles.simulation__result}>
-          <div className={styles.total}>
-            <div><span className={styles.totalText}>Total a pagar: </span></div>
-            <div><span className={styles.totalNumber}>${total}</span></div>
+          <hr />
+          <div className={styles.simulation__result}>
+            <div className={styles.total}>
+              <div>
+                <span className={styles.totalText}>Total a pagar: </span>
+              </div>
+              <div>
+                <span className={styles.totalNumber}>${total}</span>
+              </div>
+            </div>
+            <p span className={styles.note}>
+              Este valor corresponde a una simulación de tu credito segun los
+              datos seleccionados por ti. Recuerda que el{" "}
+              <strong>Aval y la firma electronica son opcionales</strong> y
+              puedes elegir no incluirlos al momento de firmar tu crédito.
+              <a href="/#"> Más información aquí</a>
+            </p>
           </div>
-          <p span className={styles.note}>
-            Este valor corresponde a una simulación de tu credito segun los datos seleccionados por ti. 
-            Recuerda que el <b>Aval y la firma electronica son opcionales</b> y puedes elegir no incluirlos al momento de firmar tu crédito. 
-          </p>
-          <button>Solicítalo Ya</button>
-        </div>
-      </div>
-     
-
-      <div className={styles.simulation__costs}>
-        <h3>Costos Fijos</h3>
-        <div className={styles.simulation__costItem}>
-          <span>Monto solicitado</span>
-          <span>${amount}</span>
-        </div>
-        <div className={styles.simulation__costItem}>
-          <span>Intereses Corrientes ({interestRate * 100}% EA)</span>
-          <span>${interest}</span>
-        </div>
-
-        <h3>Costos Opcionales</h3>
-        <div className={styles.simulation__costItem}>
-          <span>Aval</span>
-          <span>${guaranteeCost}</span>
-        </div>
-        <div className={styles.simulation__costItem}>
-          <span>Descuento Aval (Pronto pago)</span>
-          <span>${guaranteeDiscount}</span>
-        </div>
-        <div className={styles.simulation__costItem}>
-          <span>Firma Electrónica</span>
-          <span>${electronicSignatureCost}</span>
-        </div>
-        <div className={styles.simulation__costItem}>
-          <span>Documento, Firma Elect (Pronto pago)</span>
-          <span>${documentCost}</span>
+          <a href="/#" className={styles.requestNow} target="_blank">Solicítalo Ya</a>
         </div>
 
-        <div className={`${styles.simulation__costItem} ${styles.simulation__total}`}>
-          <span>Total</span>
-          <span>${total}</span>
+        <div className={styles.simulation__costs}>
+          <h5>Costos Fijos</h5>
+          <div className={styles.simulation__costItem}>
+            <div><span>Monto solicitado</span></div>
+            <div><span>${amount}</span></div>
+          </div>
+          <div className={styles.simulation__costItem}>
+            <span>Intereses Corrientes ({interestRate * 100}% EA)</span>
+            <span>${interest}</span>
+          </div>
+
+          <h5 className={styles.optionalCosts}>Costos Opcionales</h5>
+          <div className={styles.simulation__costItem}>
+            <span>Aval</span>
+            <span>${guaranteeCost}</span>
+          </div>
+          <div className={styles.simulation__costItem}>
+            <span>Descuento Aval (Pronto pago)</span>
+            <span>${guaranteeDiscount}</span>
+          </div>
+          <div className={styles.simulation__costItem}>
+            <span>Firma Electrónica</span>
+            <span>${electronicSignatureCost}</span>
+          </div>
+          <div className={styles.simulation__costItem}>
+            <span>Documento, Firma Elect (Pronto pago)</span>
+            <span>${documentCost}</span>
+          </div>
+
+          <div
+            className={`${styles.simulation__costItem} ${styles.simulation__total}`}
+          >
+            <h5>Total</h5>
+            <h5>${total}</h5>
+          </div>
         </div>
       </div>
     </div>
