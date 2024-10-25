@@ -1,10 +1,13 @@
 @import "@/styles/vars.scss";
 
 .main {
-  height: 100vh;
+  width: 100%;
+  height: auto;
   background-image: url("./images/bg-home.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-position: left;
+  // background-size: 100%;
+  background-size: cover;
   display: grid;
   grid-row-gap: 2.5rem;
 }
@@ -22,6 +25,7 @@
   padding: 60px 30px;
   border-radius: 20px;
   text-align: center;
+  color: #000;
   & h2 {
     font-family: $font-secondary;
     font-weight: 800;
@@ -56,10 +60,27 @@
   margin-bottom: 5rem;
   display: flex;
   justify-content: center;
+
   img {
     width: 80%;
     height: auto;
+    display: block;
+    position: relative;
+    top: 140px;
   }
+}
+.vector1 {
+  position: relative;
+  top: 170px;
+  left: 40px;
+}
+.vector2 {
+  position: relative;
+  bottom: 80px;
+  left: -38px;
+}
+.vector3 {
+  display: none;
 }
 
 @media (min-width: 1200px) {
@@ -69,6 +90,7 @@
     grid-template-columns: 70% 30%;
     margin-bottom: 0;
     grid-template-rows: 80% 10%;
+    background-position: center center;
     .image {
       grid-column: 2/3;
       grid-row: 1/2;
@@ -84,10 +106,12 @@
       grid-column: 1/2;
       grid-row: 1/3;
       justify-self: start;
-      width: 500px;
-      height: 460px;
+      width: 550px;
+      height: 480px;
       padding: 60px;
       margin: 60px;
+      position: relative;
+      left: 60px;
       & h2 {
         font-size: 20px;
         margin-bottom: 1rem;
@@ -109,25 +133,27 @@
       justify-self: end;
       & img {
         width: 250px;
+        position: relative;
+        top: 30px;
       }
     }
-    .vector1{
-        position: relative;
-        bottom: 20px;
-        left: 1.2rem;
-        width: 110px;
+
+    .vector1 {
+      position: relative;
+      top: -22px;
+      left: 55px;
     }
-    .vector2{
-        position: relative;
-        bottom: 110px;
-        right: 54rem;        
-        width: 90px;
+    .vector2 {
+      position: relative;
+      bottom: 90px;
+      left: -1070px;
     }
-    .vector3{
-        position: relative;
-        bottom: 25rem;
-        left: 71rem;
-        width: 110px;
+    .vector3 {
+      display: block;
+      position: relative;
+      bottom: 28rem;
+      left: 90rem;
+      width: 110px;
     }
   }
 }
