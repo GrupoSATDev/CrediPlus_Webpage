@@ -27,7 +27,7 @@ body {background:#fff;font-family: $font-primary;line-height: 1;}
 /*Laptops until up*/
 @media (min-width: 992px) {
     .container{max-width: 60rem;}
-    body {font-size: 1.563rem;}
+    body {font-size: 1rem;}
     .hidden-laptop{display: none !important;}
 }
 

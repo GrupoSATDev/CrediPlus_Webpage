@@ -1,10 +1,11 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import styles from './header.module.scss';
-import burgerCloseIcon from './images/burger-close.svg';
-import burgerIcon from './images/burger.svg';
-import logo from './images/logo.svg';
-import logoMobile from './images/logo-mobile.svg';
+import { useState } from "react";
+import Link from "next/link";
+import styles from "./header.module.scss";
+import burgerCloseIcon from "./images/burger-close.svg";
+import burgerIcon from "./images/burger.svg";
+import logo from "./images/logo.svg";
+import logoMobile from "./images/logo-mobile.svg";
+import user from "./images/user-solid.svg";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -14,18 +15,17 @@ const Header = () => {
   };
 
   const navigation = [
-    { name: 'INICIO', href: '#' },
-    { name: 'REQUISITOS', href: '#' },
-    { name: 'ALIADOS', href: '#' },
-    { name: 'BENEFICIOS', href: '#' },
+    { name: "INICIO", href: "#" },
+    { name: "REQUISITOS", href: "#" },
+    { name: "ALIADOS", href: "#" },
+    { name: "BENEFICIOS", href: "#" },
   ];
 
   return (
     <header>
       <a
         href="#content"
-        className="visually-hidden visible-when-focused bypass-block-link"
-      >
+        className="visually-hidden visible-when-focused bypass-block-link">
         Skip Navigation
       </a>
       <div className={`${styles.nav} ${styles.headerTransparent}`}>
@@ -40,13 +40,15 @@ const Header = () => {
               />
             </picture>
           </Link>
+          <a href="/#" className={styles.contact}>
+              <img width={16} height={16} src={user.src} alt="user-icon"  className={styles.icon}/>Ingresa
+            </a>
           <button
             aria-controls="navbarmain"
             type="button"
             aria-label="Toggle navigation"
             className={`${styles.toggleMobil} hidden-laptop`}
-            onClick={toggleMobile}
-          >
+            onClick={toggleMobile}>
             <img
               src={openMenu ? burgerCloseIcon.src : burgerIcon.src}
               alt="Open/Hide Menu"
@@ -56,12 +58,9 @@ const Header = () => {
           </button>
           <div
             className={
-              openMenu
-                ? styles.navbar_collapse__opened
-                : styles.navbar_collapse
+              openMenu ? styles.navbar_collapse__opened : styles.navbar_collapse
             }
-            id="navbarmain"
-          >
+            id="navbarmain">
             <nav className={styles.navbarMenu}>
               {navigation.map((item) => (
                 <Link key={item.name} href={item.href} passHref>
@@ -69,12 +68,6 @@ const Header = () => {
                 </Link>
               ))}
             </nav>
-            <a
-              href="/#"
-              className={`${styles.nav_link} ${styles.contact}`}
-            >
-              Ingresa
-            </a>
           </div>
         </div>
       </div>

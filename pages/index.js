@@ -5,6 +5,7 @@ import CountOnUs from "@/components/CountOnUs";
 import Loan from "@/components/LoanRequirements";
 import Partners from "@/components/Partners";
 import Benefits from "@/components/Benefits";
+import NavbarSlider from "@/components/NavbarSlider";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <Loan />
         <Partners />
         <Benefits />
+        <NavbarSlider />
       </Layout>
     </>
   );

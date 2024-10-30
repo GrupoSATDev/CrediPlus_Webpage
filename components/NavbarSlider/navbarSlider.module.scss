@@ -1,0 +1,99 @@
+@import "@/styles/vars.scss";
+
+.navbar-slider {
+  padding: 30px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.navbarList {
+  display: none;
+}
+
+.slider .slick-slide {
+  text-align: center;
+  padding: 10px;
+  font-size: 80px;
+  color: #535353;
+}
+
+.slider .slick-prev,
+.slider .slick-next {
+  color: red;
+}
+
+.title {
+  color: $main-color;
+  width: 100%;
+  height: 63px;
+  margin: 0 auto;
+  line-height: 63px;
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  display: block;
+}
+
+.title span {
+  color: $light-blue;
+}
+
+.navLink {
+  font-size: 20px;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  color: #818181;
+}
+
+.navLink:active {
+  color: $main-color;
+}
+
+.text {
+  display: none;
+}
+
+.textShow {
+  display: block;
+  border-top: 3px solid #ccc;
+  width: 90%;
+  padding: 24px 0;
+  margin: 0 auto;
+  color: #535353;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 38px;
+    font-weight: 800;
+    margin: 65px 0 24px 0;
+  }
+  .navbar-slider {
+    display: none;
+  }
+  .navbarList {
+    padding: 30px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    .navItem {
+      text-decoration: none;
+      display: inline-block;
+      color: #818181;
+      font-size: 26px;
+      font-weight: 800;
+    }
+
+    .navItem:active {
+      color: $main-color;
+    }
+  }
+
+}
