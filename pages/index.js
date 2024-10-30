@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Layout from "@/components/Layout";
-import Hero from "@/components/Hero";
+import Banner from "@/components/Banner";
 import CountOnUs from "@/components/CountOnUs";
 import Loan from "@/components/LoanRequirements";
 import Partners from "@/components/Partners";
@@ -25,7 +25,7 @@ export default function Home() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/logo.png" />
         </Head>
-        <Hero />
+        <Banner />
         <CountOnUs />
         <Loan />
         <Partners />

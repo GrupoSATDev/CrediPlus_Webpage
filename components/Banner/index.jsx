@@ -2,6 +2,7 @@ import homeMobile1 from "./images/mobile.webp";
 import homeDesktop1 from "./images/desktop.webp";
 import bgImg from "./images/bg.png";
 import top from "./banner.module.scss";
+import Simulation from "@/components/Simulation";
 
 const Banner = () => {
   return (
@@ -13,7 +14,7 @@ const Banner = () => {
           src={homeMobile1.src}
           alt="Videre Rooftop Restaurant & Bar"
           loading="eager"
-          // className="img-fluid"
+          className="img-fluid"
           width={379}
           height={750}
         />
@@ -39,6 +40,7 @@ const Banner = () => {
           <p>En <strong>Crediplus</strong> cuentas con el crédito en línea <strong>más confiable, ágil y adaptable del mercado.</strong></p>
         {/* </div> */}
       </div>
+      <Simulation />
     </section>
   );
 };
