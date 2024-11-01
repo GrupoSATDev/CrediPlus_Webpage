@@ -84,7 +84,10 @@ const Footer = () => {
               </AccordionPanel>
             </Accordion>
 
-            <a className={styles.button_mobile} href="https://trabajadores.crediplus.com.co/">
+            <a
+              className={styles.button_mobile}
+              href="https://trabajadores.crediplus.com.co/"
+            >
               SOLICITAR PRÉSTAMO
             </a>
           </div>
@@ -96,28 +99,26 @@ const Footer = () => {
               </h3>
               <ul>
                 <li className={styles.link}>
-                  <Link href="/contacto">
-                    <span>Contáctanos</span>
+                  <Link href="/Requisitos">
+                    <span>Requisitos</span>
                   </Link>
                 </li>
                 <li className={styles.link}>
-                  <Link href="/como-funciona">
-                    <span>¿Cómo funciona?</span>
+                  <Link href="/Aliados">
+                    <span>Aliados</span>
                   </Link>
                 </li>
                 <li className={styles.link}>
-                  <Link href="/blog">
-                    <span>Blog</span>
-                  </Link>
-                </li>
-                <li className={styles.link}>
-                  <Link href="/referidos">
-                    <span>Referidos</span>
+                  <Link href="/Beneficios">
+                    <span>Beneficios</span>
                   </Link>
                 </li>
               </ul>
 
-              <a className={styles.button} href="https://trabajadores.crediplus.com.co/">
+              <a
+                className={styles.button}
+                href="https://trabajadores.crediplus.com.co/"
+              >
                 SOLICITAR PRÉSTAMO
               </a>
             </div>
@@ -129,41 +130,41 @@ const Footer = () => {
 
               <ul>
                 <li className={styles.link}>
-                  <Link href="/iniciar-sesion">
+                  <a href="https://trabajadores.crediplus.com.co/">
                     <span>Iniciar Sesión</span>
-                  </Link>
+                  </a>
                 </li>
                 <li className={styles.link}>
-                  <Link href="/paga-tu-credito">
+                  <a href="https://trabajadores.crediplus.com.co/">
                     <span>Paga tu Crédito</span>
-                  </Link>
+                  </a>
                 </li>
                 <li className={styles.link}>
-                  <Link href="/ampliar-plazo">
+                  <a href="https://trabajadores.crediplus.com.co/">
                     <span>Ampliar Plazo</span>
-                  </Link>
+                  </a>
                 </li>
                 <li className={styles.link}>
-                  <Link href="/pide-tu-credito">
+                  <a href="https://trabajadores.crediplus.com.co/">
                     <span>Pide tu Crédito</span>
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className={styles.label}>
-                <span>+</span>CONTACTANOS
+                <span>+</span>CONTÁCTANOS
               </h3>
               <ul>
                 <li className={styles.link}>
-                  <a href="mailto: info@crediplus.com.co">info@crediplus.com.co</a>
+                  <a href="mailto: info@crediplus.com.co">
+                    info@crediplus.com.co
+                  </a>
                 </li>
                 <li className={styles.link}>
                   <a href="tel:0000000000">000 - 000 - 0000</a>
                 </li>
-                <li className={styles.link}>
-                  Calle 70B Cra 41 # 187
-                </li>
+                <li className={styles.link}>Calle 70B Cra 41 # 187</li>
               </ul>
             </div>
           </div>
