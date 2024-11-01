@@ -33,7 +33,7 @@ const Banner = () => {
           height={400}
           loading="eager"
         />
-        <a href="/#" passHref>
+        <a href="https://trabajadores.crediplus.com.co/" passHref>
           <button className={top.button}>Instalar App</button>
         </a>
         {/* <div className={top.contentText}> */}

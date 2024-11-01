@@ -30,7 +30,7 @@ const countOnUs = () => {
           codeudores, todo 100% en línea, desde tu computadora o celular, fácil,
           rápido y seguro.
         </p>
-        <a href="/" className={styles.button}>
+        <a href="https://trabajadores.crediplus.com.co/" className={styles.button}>
           Regístrate
         </a>
       </div>

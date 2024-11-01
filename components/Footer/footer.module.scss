@@ -96,7 +96,7 @@
 @media (min-width: 768px) {
   .main {
     display: grid;
-    grid-template-columns: repeat(2, 200px 1fr);
+    grid-template-columns: repeat(3, 200px 1fr);
     gap: 90px;
     color: #fff;
     margin-top: 36px;
@@ -112,7 +112,7 @@
     display: flex;
     justify-content: space-around;
     gap: 20px;
-    width: 600px;
+    width: 800px;
   }
 
   .label {

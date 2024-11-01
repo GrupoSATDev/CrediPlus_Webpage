@@ -81,7 +81,7 @@ const Simulation = () => {
               <a href="/#"> Más información aquí</a>
             </p>
           </div>
-          <a href="/#" className={styles.requestNow} target="_blank">Solicítalo Ya</a>
+          <a href="https://trabajadores.crediplus.com.co/" className={styles.requestNow} target="_blank">Solicítalo Ya</a>
         </div>
 
         <div className={styles.simulation__costs}>

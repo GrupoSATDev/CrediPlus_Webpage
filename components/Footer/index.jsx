@@ -31,11 +31,6 @@ const Footer = () => {
                 <Box>
                   <ul>
                     <li>
-                      <Link href="/contacto">
-                        <span>Contáctanos</span>
-                      </Link>
-                    </li>
-                    <li>
                       <Link href="/como-funciona">
                         <span>¿Cómo funciona?</span>
                       </Link>
@@ -89,7 +84,7 @@ const Footer = () => {
               </AccordionPanel>
             </Accordion>
 
-            <a className={styles.button_mobile} href="/#">
+            <a className={styles.button_mobile} href="https://trabajadores.crediplus.com.co/">
               SOLICITAR PRÉSTAMO
             </a>
           </div>
@@ -122,7 +117,7 @@ const Footer = () => {
                 </li>
               </ul>
 
-              <a className={styles.button} href="/#">
+              <a className={styles.button} href="https://trabajadores.crediplus.com.co/">
                 SOLICITAR PRÉSTAMO
               </a>
             </div>
@@ -153,10 +148,21 @@ const Footer = () => {
                     <span>Pide tu Crédito</span>
                   </Link>
                 </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className={styles.label}>
+                <span>+</span>CONTACTANOS
+              </h3>
+              <ul>
                 <li className={styles.link}>
-                  <Link href="/pide-tu-crediplazo">
-                    <span>Pide tu CrédiPlazo</span>
-                  </Link>
+                  <a href="mailto: info@crediplus.com.co">info@crediplus.com.co</a>
+                </li>
+                <li className={styles.link}>
+                  <a href="tel:0000000000">000 - 000 - 0000</a>
+                </li>
+                <li className={styles.link}>
+                  Calle 70B Cra 41 # 187
                 </li>
               </ul>
             </div>

@@ -40,7 +40,7 @@ const Header = () => {
               />
             </picture>
           </Link>
-          <a href="/#" className={styles.contact}>
+          <a href="https://trabajadores.crediplus.com.co/" className={styles.contact}>
               <img width={16} height={16} src={user.src} alt="user-icon"  className={styles.icon}/>Ingresa
             </a>
           <button
