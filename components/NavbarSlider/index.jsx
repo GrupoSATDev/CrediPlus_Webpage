@@ -25,7 +25,8 @@ const NavbarSlider = () => {
   ];
 
   return (
-    <section>
+    <section className="container">
+      <div className={styles.main}>
       <h2 className={styles.title}>
         ¡ Costos de Usar <span>Crediplus!</span>
       </h2>
@@ -67,6 +68,7 @@ const NavbarSlider = () => {
       <p className={tabToggle === 4 ? styles.textShow : styles.text}>
         Este concepto hace referencia al costo único que el cliente asume por la emisión de la tarjeta CrediPlus. Este pago cubre los gastos de producción y entrega del plástico físico, que el cliente usará para realizar transacciones. Es un costo que solo se aplica al inicio, al momento de generar la tarjeta.      
       </p>
+      </div>
     </section>
   );
 };

@@ -11,26 +11,26 @@ const Loan = () => {
 
   return (
     <section className={styles.loan}>
-      <div className={styles.container}>
+      <div className="container">
         <h2 className={styles.title}>
           ¿Qué necesitas para <strong>solicitar un préstamo en línea?</strong>
         </h2>
         <div className={styles.cards}>
           <ul style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
             <li>
-              <img src={slide1.src} alt="" width="80" />
+              <img src={slide1.src} alt="" />
               <p>Ser colombiano mayor de edad (18 años) y vivir en Colombia</p>
             </li>
             <li>
-              <img src={slide2.src} alt="" width="80" />
+              <img src={slide2.src} alt="" />
               <p>Ser titular de una cuenta bancaria activa a tu nombre.</p>
             </li>
             <li>
-              <img src={slide3.src} alt="" width="70" />
+              <img src={slide3.src} alt=""  />
               <p>Poseer una cuenta de correo electrónico personal activa.</p>
             </li>
             <li>
-              <img src={slide4.src} alt="" width="50" />
+              <img src={slide4.src} alt=""/>
               <p>Contar con un número de celular activo.</p>
             </li>
           </ul>
@@ -41,7 +41,8 @@ const Loan = () => {
             <span
               key={index}
               className={index === currentSlide ? styles.active : ""}
-              onClick={() => setCurrentSlide(index)}></span>
+              onClick={() => setCurrentSlide(index)}
+            ></span>
           ))}
         </div>
 

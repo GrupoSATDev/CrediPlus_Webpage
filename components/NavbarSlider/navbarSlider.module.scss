@@ -1,5 +1,13 @@
 @import "@/styles/vars.scss";
 
+.main{
+  margin: 36px 0;
+  padding: 36px 0;
+  & li:hover{
+    color:#0B8AFF;
+  }
+}
+
 .navbar-slider {
   padding: 30px;
   width: 90%;
@@ -9,7 +17,9 @@
 .navbarList {
   display: none;
 }
-
+.navItem{
+  font-family: "Inter", sans-serif;
+}
 .slider .slick-slide {
   text-align: center;
   padding: 10px;
@@ -24,9 +34,9 @@
 
 .title {
   color: $main-color;
+  font-family: "Inter", sans-serif;
   width: 100%;
   height: 63px;
-  margin: 0 auto;
   line-height: 63px;
   font-size: 22px;
   font-weight: 800;
@@ -47,7 +57,7 @@
 }
 
 .navLink:active {
-  color: $main-color;
+  color: #0B8AFF;
 }
 
 .text {
@@ -61,7 +71,6 @@
   padding: 24px 0;
   margin: 0 auto;
   color: #535353;
-  font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   text-align: center;
@@ -70,9 +79,9 @@
 
 @media (min-width: 768px) {
   .title {
-    font-size: 38px;
+    font-size: 36px;
     font-weight: 800;
-    margin: 65px 0 24px 0;
+    margin-bottom: 2rem;
   }
   .navbar-slider {
     display: none;
@@ -87,13 +96,27 @@
       text-decoration: none;
       display: inline-block;
       color: #818181;
-      font-size: 26px;
+      font-size: 20px;
       font-weight: 800;
     }
 
     .navItem:active {
-      color: $main-color;
+      color: #0B8AFF;
     }
   }
+  .textShow{
+    font-size: 14px;
+    height: 150px;
+    padding: 2 4rem ;
+  }
 
+}
+
+@media  (min-width: 900px) {
+  .textShow{
+    padding: 2rem 4rem 0;
+    height: 130px;
+
+  }
+  
 }

@@ -6,6 +6,7 @@ import pathers4 from './images/pathers4.png';
 
 const Pathers = () => {
   return (
+    <div className="container">
     <div className={styles.main}>
       <h2>Descubre <span>Nuestros Aliados</span></h2>
       <div className={styles.container}>
@@ -14,6 +15,7 @@ const Pathers = () => {
         <div class="item3"><img src={pathers3.src} alt="" /></div>  
         <div class="item4"><img src={pathers4.src} alt="" /></div>
       </div>
+    </div>
     </div>
   );
 };  

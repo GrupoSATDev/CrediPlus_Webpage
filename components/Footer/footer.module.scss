@@ -7,6 +7,9 @@
     list-style: none;
     padding: 0 5px;
   }
+  & li:hover{
+    color: $second-color;
+  }
 }
 .main {
   display: grid;
@@ -37,7 +40,7 @@
 .link {
   line-height: 3rem;
   font-weight: 500;
-  font-size: 19px;
+  font-size: 16px;
 }
 
 .main :global(.egHdhy) {
@@ -71,11 +74,12 @@
 }
 
 .button_mobile {
-  display: block;
+text-align: center;  
+display: block;
   margin: auto;
   width: 290px;
   font-weight: 600;
-  font-size: 4vw;
+  // font-size: 4vw;
   letter-spacing: 1px;
   padding: 1rem ;
   margin-top: 2rem;
@@ -92,11 +96,13 @@
   background-color: white;
   color: $main-color;
 }
-
 @media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
   .main {
     display: grid;
-    grid-template-columns: repeat(3, 200px 1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 90px;
     color: #fff;
     margin-top: 36px;
@@ -147,5 +153,8 @@
 
   .button_mobile {
     display: none;
+  }
+  .logo {
+    row-gap: 0;
   }
 }

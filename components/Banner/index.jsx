@@ -20,7 +20,7 @@ const Banner = () => {
         />
       </picture>
 
-      <div className={top.captionHome}>
+      <div className={`${top.captionHome} container`}>
         <h1 className={top.title}>
           <span className={top.title1}>Crédito</span>
           <span className={top.title2}>100%</span>
@@ -33,7 +33,7 @@ const Banner = () => {
           height={400}
           loading="eager"
         />
-        <a href="https://trabajadores.crediplus.com.co/" passHref>
+        <a href="/#" passHref>
           <button className={top.button}>Instalar App</button>
         </a>
         {/* <div className={top.contentText}> */}
