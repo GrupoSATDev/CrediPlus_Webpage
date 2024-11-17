@@ -4,7 +4,7 @@ import styles from "./simulation.module.scss";
 const Simulation = () => {
   const [amount, setAmount] = useState(250000);
   const [days, setDays] = useState(10);
-  const interestRate = 0.0275; // Ejemplo: 2.75% EA
+  const interestRate = 0.26; // Ejemplo: 2.75% EA
   const guaranteeCost = 60393;
   const electronicSignatureCost = 130500;
   const guaranteeDiscount = -23800; // Descuento por pronto pago
