@@ -7,7 +7,7 @@ const Simulation = () => {
   const interestRate = 0.26; // Ejemplo: 2.75% EA
   const guaranteeCost = 60393;
   const electronicSignatureCost = 130500;
-  const guaranteeDiscount = -23800; // Descuento por pronto pago
+  //const guaranteeDiscount = -23800; // Descuento por pronto pago
   const documentCost = -116000; // Descuento por pronto pago
 
   const interest = (amount * interestRate * (days / 365)).toFixed(2);
@@ -16,7 +16,7 @@ const Simulation = () => {
     parseFloat(interest) +
     guaranteeCost +
     electronicSignatureCost +
-    guaranteeDiscount +
+    guaranteeCost +
     documentCost
   ).toFixed(2);
 
@@ -100,18 +100,18 @@ const Simulation = () => {
             <span>Aval</span>
             <span>${guaranteeCost}</span>
           </div>
-          <div className={styles.simulation__costItem}>
+          {/* <div className={styles.simulation__costItem}>
             <span>Descuento Aval (Pronto pago)</span>
             <span>${guaranteeDiscount}</span>
-          </div>
+          </div> */}
           <div className={styles.simulation__costItem}>
             <span>Firma Electrónica</span>
             <span>${electronicSignatureCost}</span>
           </div>
-          <div className={styles.simulation__costItem}>
+          {/* <div className={styles.simulation__costItem}>
             <span>Documento, Firma Elect (Pronto pago)</span>
             <span>${documentCost}</span>
-          </div>
+          </div> */}
 
           <div
             className={`${styles.simulation__costItem} ${styles.simulation__total}`}
