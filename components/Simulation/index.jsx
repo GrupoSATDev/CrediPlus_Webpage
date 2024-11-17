@@ -20,6 +20,10 @@ const Simulation = () => {
     documentCost
   ).toFixed(2);
 
+  const formatCurrency = (value) => {
+    return parseInt(value).toLocaleString('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0 });
+  };
+
   return (
     <div className={styles.main}>
       <div className={styles.simulation}>
@@ -40,7 +44,7 @@ const Simulation = () => {
                 <span>$100 000</span>
               </div>
               <div className={styles.simulation__amountDisplay}>
-                <span>${amount}</span>
+                <span>{formatCurrency(amount)}</span>
               </div>
             </div>
           </div>
@@ -70,7 +74,7 @@ const Simulation = () => {
                 <span className={styles.totalText}>Total a pagar: </span>
               </div>
               <div>
-                <span className={styles.totalNumber}>${total}</span>
+                <span className={styles.totalNumber}>{formatCurrency(total)}</span>
               </div>
             </div>
             <p span className={styles.note}>
@@ -88,17 +92,17 @@ const Simulation = () => {
           <h5>Costos Fijos</h5>
           <div className={styles.simulation__costItem}>
             <div><span>Monto solicitado</span></div>
-            <div><span>${amount}</span></div>
+            <div><span>{formatCurrency(amount)}</span></div>
           </div>
           <div className={styles.simulation__costItem}>
             <span>Intereses Corrientes ({interestRate * 100}% EA)</span>
-            <span>${interest}</span>
+            <span>{formatCurrency(interest)}</span>
           </div>
 
           <h5 className={styles.optionalCosts}>Costos Opcionales</h5>
           <div className={styles.simulation__costItem}>
             <span>Aval</span>
-            <span>${guaranteeCost}</span>
+            <span>{formatCurrency(guaranteeCost)}</span>
           </div>
           {/* <div className={styles.simulation__costItem}>
             <span>Descuento Aval (Pronto pago)</span>
@@ -106,7 +110,7 @@ const Simulation = () => {
           </div> */}
           <div className={styles.simulation__costItem}>
             <span>Firma Electrónica</span>
-            <span>${electronicSignatureCost}</span>
+            <span>{formatCurrency(electronicSignatureCost)}</span>
           </div>
           {/* <div className={styles.simulation__costItem}>
             <span>Documento, Firma Elect (Pronto pago)</span>
@@ -117,7 +121,7 @@ const Simulation = () => {
             className={`${styles.simulation__costItem} ${styles.simulation__total}`}
           >
             <h5>Total</h5>
-            <h5>${total}</h5>
+            <h5>{formatCurrency(total)}</h5>
           </div>
         </div>
       </div>
