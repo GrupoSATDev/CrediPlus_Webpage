@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styles from "./simulation.module.scss";
 
 const Simulation = () => {
-  const [amount, setAmount] = useState(250000);
-  const [days, setDays] = useState(10);
+  const [amount, setAmount] = useState(100000);
+  const [days, setDays] = useState(30);
   const interestRate = 0.26; // Ejemplo: 2.75% EA
   const documentCost = 25000; // Tarjeta membresía
 
