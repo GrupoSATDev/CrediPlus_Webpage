@@ -4,7 +4,7 @@ import { Accordion, AccordionPanel, Box, Text } from "grommet";
 
 const Benefits = () => {
   return (
-    <div className={styles.main}>
+    <div className={styles.main} id='beneficios'>
       <div className="container">
         <h2>
           ¡Beneficios Exclusivos para los{" "}

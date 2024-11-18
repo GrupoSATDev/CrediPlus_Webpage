@@ -4,6 +4,44 @@ import styles from "./footer.module.scss";
 import Link from "next/link";
 
 const Footer = () => {
+  
+  const section1 = {
+    label: "INFORMACIÓN ÚTIL",
+    links: [
+      { href: "/#requisitos", text: "Requisitos" },
+      { href: "/#aliados", text: "Aliados" },
+      { href: "/#beneficios", text: "Beneficios" },
+    ],
+  };
+
+  const section2 = {
+    label: "MI CUENTA",
+    links: [
+      {
+        href: "https://trabajadores.crediplus.com.co/",
+        text: "Iniciar Sesión",
+      },
+      {
+        href: "https://trabajadores.crediplus.com.co/",
+        text: "Paga tu Crédito",
+      },
+      { href: "https://trabajadores.crediplus.com.co/", text: "Ampliar Plazo" },
+      {
+        href: "https://trabajadores.crediplus.com.co/",
+        text: "Pide tu Crédito",
+      },
+    ],
+  };
+
+  const section3 = {
+    label: "CONTÁCTANOS",
+    links: [
+      { href: "mailto:info@crediplus.com.co", text: "info@crediplus.com.co" },
+      { href: "tel:0000000000", text: "000 - 000 - 0000" },
+      { text: "Calle 70B Cra 41 # 187" },
+    ],
+  };
+
   return (
     <footer className={styles.footer}>
       <div className={`${styles.main} container`}>
@@ -30,21 +68,15 @@ const Footer = () => {
               <AccordionPanel label="+ INFORMACIÓN ÚTIL">
                 <Box>
                   <ul>
-                    <li>
-                      <Link href="/como-funciona">
-                        <span>¿Cómo funciona?</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/blog">
-                        <span>Blog</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/referidos">
-                        <span>Referidos</span>
-                      </Link>
-                    </li>
+                    {section1.links.map((link, index) => (
+                      <li key={index}>
+                        {link.href ? (
+                          <Link href={link.href}>{link.text}</Link>
+                        ) : (
+                          <span>{link.text}</span>
+                        )}
+                      </li>
+                    ))}
                   </ul>
                 </Box>
               </AccordionPanel>
@@ -54,31 +86,33 @@ const Footer = () => {
               <AccordionPanel className={styles.label} label="+ MI CUENTA">
                 <Box>
                   <ul>
-                    <li>
-                      <Link href="/iniciar-sesion">
-                        <span>Iniciar Sesión</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/paga-tu-credito">
-                        <span>Paga tu Crédito</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/ampliar-plazo">
-                        <span>Ampliar Plazo</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/pide-tu-credito">
-                        <span>Pide tu Crédito</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/pide-tu-crediplazo">
-                        <span>Pide tu CrédiPlazo</span>
-                      </Link>
-                    </li>
+                    {section2.links.map((link, index) => (
+                      <li key={index}>
+                        {link.href ? (
+                          <a href={link.href} target="_blank">{link.text}</a>
+                        ) : (
+                          <span>{link.text}</span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </Box>
+              </AccordionPanel>
+            </Accordion>
+
+            <Accordion>
+              <AccordionPanel className={styles.label} label="+ CONTÁCTANOS">
+                <Box>
+                  <ul>
+                    {section3.links.map((link, index) => (
+                      <li key={index}>
+                        {link.href ? (
+                          <a href={link.href}>{link.text}</a>
+                        ) : (
+                          <span>{link.text}</span>
+                        )}
+                      </li>
+                    ))}
                   </ul>
                 </Box>
               </AccordionPanel>
@@ -98,21 +132,15 @@ const Footer = () => {
                 <span>+</span>INFORMACIÓN ÚTIL
               </h3>
               <ul>
-                <li className={styles.link}>
-                  <Link href="/Requisitos">
-                    <span>Requisitos</span>
-                  </Link>
-                </li>
-                <li className={styles.link}>
-                  <Link href="/Aliados">
-                    <span>Aliados</span>
-                  </Link>
-                </li>
-                <li className={styles.link}>
-                  <Link href="/Beneficios">
-                    <span>Beneficios</span>
-                  </Link>
-                </li>
+                {section1.links.map((link, index) => (
+                  <li className={styles.link} key={index}>
+                    {link.href ? (
+                      <a href={link.href}>{link.text}</a>
+                    ) : (
+                      <span>{link.text}</span>
+                    )}
+                  </li>
+                ))}
               </ul>
 
               <a
@@ -127,28 +155,16 @@ const Footer = () => {
               <h3 className={styles.label}>
                 <span>+</span>MI CUENTA
               </h3>
-
               <ul>
-                <li className={styles.link}>
-                  <a href="https://trabajadores.crediplus.com.co/">
-                    <span>Iniciar Sesión</span>
-                  </a>
-                </li>
-                <li className={styles.link}>
-                  <a href="https://trabajadores.crediplus.com.co/">
-                    <span>Paga tu Crédito</span>
-                  </a>
-                </li>
-                <li className={styles.link}>
-                  <a href="https://trabajadores.crediplus.com.co/">
-                    <span>Ampliar Plazo</span>
-                  </a>
-                </li>
-                <li className={styles.link}>
-                  <a href="https://trabajadores.crediplus.com.co/">
-                    <span>Pide tu Crédito</span>
-                  </a>
-                </li>
+                {section2.links.map((link, index) => (
+                  <li className={styles.link} key={index}>
+                    {link.href ? (
+                      <a href={link.href} target="_blank">{link.text}</a>
+                    ) : (
+                      <span>{link.text}</span>
+                    )}
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
@@ -156,15 +172,15 @@ const Footer = () => {
                 <span>+</span>CONTÁCTANOS
               </h3>
               <ul>
-                <li className={styles.link}>
-                  <a href="mailto: info@crediplus.com.co">
-                    info@crediplus.com.co
-                  </a>
-                </li>
-                <li className={styles.link}>
-                  <a href="tel:0000000000">000 - 000 - 0000</a>
-                </li>
-                <li className={styles.link}>Calle 70B Cra 41 # 187</li>
+                {section3.links.map((link, index) => (
+                  <li className={styles.link} key={index}>
+                    {link.href ? (
+                      <a href={link.href}>{link.text}</a>
+                    ) : (
+                      <span>{link.text}</span>
+                    )}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

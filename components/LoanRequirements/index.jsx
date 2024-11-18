@@ -10,7 +10,7 @@ const Loan = () => {
   const totalSlides = 4; // Número total de tarjetas
 
   return (
-    <section className={styles.loan}>
+    <section className={styles.loan} id='requisitos'>
       <div className="container">
         <h2 className={styles.title}>
           ¿Qué necesitas para <strong>solicitar un préstamo en línea?</strong>

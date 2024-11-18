@@ -241,22 +241,19 @@ padding: 8px 16px 8px 14px;
       background: transparent;
     }
     .col :global(.btn-outline-main) {
-      color: #fff;
-      border: 1px solid #fff;
-      background-color: transparent;
+      color: #FDD04E !important;
     }
     .col :global(.btn-outline-main:hover),
     .col :global(.btn-outline-main:focus) {
-      color: #fff;
-      border: 1px solid #fff;
+      color: #FDD04E !important;
     }
     .navLink:hover,
     .navLink:focus {
-      border-color: #fff;
+      color: #FDD04E !important;
     }
     .navLink:global(.active),
     .navLink__active {
-      border-color: #fff;
+      color: #FDD04E  !important;
     }
   }
   .floating .headerTransparent {

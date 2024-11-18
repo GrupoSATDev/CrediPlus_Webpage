@@ -15,10 +15,10 @@ const Header = () => {
   };
 
   const navigation = [
-    { name: "INICIO", href: "#" },
-    { name: "REQUISITOS", href: "#" },
-    { name: "ALIADOS", href: "#" },
-    { name: "BENEFICIOS", href: "#" },
+    { name: "INICIO", href: "/" },
+    { name: "REQUISITOS", href: "/#requisitos" },
+    { name: "ALIADOS", href: "/#aliados" },
+    { name: "BENEFICIOS", href: "/#beneficios" },
   ];
 
   return (
@@ -30,7 +30,7 @@ const Header = () => {
       </a>
       <div className={`${styles.nav} ${styles.headerTransparent}`}>
         <div className={`${styles.content} container`}>
-          <Link href="/#" passHref>
+          <Link href="/" passHref>
             <picture>
               <source srcSet={logo.src} media="(min-width: 768px)" />
               <img
@@ -40,7 +40,7 @@ const Header = () => {
               />
             </picture>
           </Link>
-          <a href="https://trabajadores.crediplus.com.co/" className={styles.contact}>
+          <a href="https://trabajadores.crediplus.com.co/" target="_blank" className={styles.contact}>
               <img width={16} height={16} src={user.src} alt="user-icon"  className={styles.icon}/>Ingresa
             </a>
           <button
