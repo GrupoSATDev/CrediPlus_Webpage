@@ -74,13 +74,18 @@
 .vector3 {
   display: none;
 }
-// @media (min-width: 768px){
-//   .image {
-//     & img {
-//       width: 80%;
-//     }
-//   }
-// };
+@media (min-width: 768px){
+  .image {
+    & img {
+      width: 70%;
+    }
+  }
+  .imageLogo {
+    & img {
+      width: 70%;
+    }
+  }
+};
 
 @media (min-width: 992px) {
   .main {
