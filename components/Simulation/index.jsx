@@ -113,7 +113,7 @@ const Simulation = () => {
             <span>{formatCurrency(guaranteeCost)}</span>
           </div>
           <div className={styles.simulation__costItem}>
-            <span>Firma Electrónica</span>
+            <span>Firma Electrónica / Disponibilidad</span>
             <span>{formatCurrency(electronicSignatureCost)}</span>
           </div>
 

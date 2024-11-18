@@ -60,17 +60,13 @@ const Loan = () => {
 
         <div className={styles.box_container_blue}>
           <p>
-            <strong>Firma electrónica:</strong> Solo se cobrará si decides
-            usarla, con un costo de $130,500. Puedes obtener un descuento por
-            pago puntual o anticipado, como reconocimiento a tu buen
-            comportamiento financiero y para promover la inclusión financiera.
+            <strong>Firma electrónica / Disponibilidad :</strong> corresponde a las actividades
+            administrativas que están relacionadas con tu crédito y asimismo la Disponibilidad
+            que mantendremos para que tu cupo esté siempre disponible.
           </p>
           <p>
-            <strong>Aval:</strong> De manera opcional, puedes contratar un aval
-            a través de Crediplus, que sirve como garantía para tu crédito. El
-            costo varía según el monto y el plazo elegido, pero puede reducirse
-            si pagas puntualmente o antes del vencimiento. ¡Un aval que vale
-            menos cuando pagas bien!
+            <strong>Aval:</strong>Este Aval corresponde a los costos de la garantía que se requieren
+            para la aprobación de tu crédito dentro de la plataforma.
           </p>
         </div>
       </div>
