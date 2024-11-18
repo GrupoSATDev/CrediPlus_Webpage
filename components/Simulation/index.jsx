@@ -5,10 +5,19 @@ const Simulation = () => {
   const [amount, setAmount] = useState(250000);
   const [days, setDays] = useState(10);
   const interestRate = 0.26; // Ejemplo: 2.75% EA
-  const guaranteeCost = 60393;
-  const electronicSignatureCost = 130500;
-  //const guaranteeDiscount = -23800; // Descuento por pronto pago
   const documentCost = 25000; // Tarjeta membresía
+
+  // Función para calcular los costos basados en días
+  const calculateCost = (days, costs) => {
+    if (days <= 30) return costs[30];
+    if (days <= 60) return costs[60];
+    if (days <= 90) return costs[90];
+    return 0; // Por si supera los 90 días y no se aplica costo
+  };
+
+  // Costos según los días
+  const guaranteeCost = calculateCost(days, { 30: 42500, 60: 51500, 90: 60000 });
+  const electronicSignatureCost = calculateCost(days, { 30: 43500, 60: 87000, 90: 130500 });
 
   const interest = (amount * interestRate * (days / 365)).toFixed(2);
   const total = (
@@ -16,7 +25,6 @@ const Simulation = () => {
     parseFloat(interest) +
     guaranteeCost +
     electronicSignatureCost +
-    guaranteeCost +
     documentCost
   ).toFixed(2);
 
@@ -35,7 +43,7 @@ const Simulation = () => {
               type="range"
               min="100000"
               max="1000000"
-              step="10000"
+              step="100000"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
             />
@@ -52,15 +60,15 @@ const Simulation = () => {
             <label>¿Cuándo puedes pagarlo?</label>
             <input
               type="range"
-              min="5"
-              max="150"
-              step="1"
+              min="30"
+              max="90"
+              step="30"
               value={days}
               onChange={(e) => setDays(e.target.value)}
             />
             <div className={styles.days}>
               <div>
-                <span>5 Días</span>
+                <span>30 Días</span>
               </div>
               <div className={styles.simulation__daysDisplay}>
                 <span>{days} Días</span>
@@ -77,10 +85,10 @@ const Simulation = () => {
                 <span className={styles.totalNumber}>{formatCurrency(total)}</span>
               </div>
             </div>
-            <p span className={styles.note}>
+            <p className={styles.note}>
               Este valor corresponde a una simulación de tu credito segun los
               datos seleccionados por ti. Recuerda que el{" "}
-              <strong>Aval y la firma electronica son opcionales</strong> y
+              <strong>Aval y la firma electrónica son opcionales</strong> y
               puedes elegir no incluirlos al momento de firmar tu crédito.
               <a href="/#"> Más información aquí</a>
             </p>
@@ -104,12 +112,7 @@ const Simulation = () => {
             <span>Aval</span>
             <span>{formatCurrency(guaranteeCost)}</span>
           </div>
-          {/* <div className={styles.simulation__costItem}>
-            <span>Descuento Aval (Pronto pago)</span>
-            <span>${guaranteeDiscount}</span>
-          </div> */}
-
-          <div  className={styles.simulation__costItem}>
+          <div className={styles.simulation__costItem}>
             <span>Firma Electrónica</span>
             <span>{formatCurrency(electronicSignatureCost)}</span>
           </div>
@@ -118,10 +121,6 @@ const Simulation = () => {
             <span>Tarjeta de Membresía</span>
             <span>{formatCurrency(documentCost)}</span>
           </div>
-          {/* <div className={styles.simulation__costItem}>
-            <span>Documento, Firma Elect (Pronto pago)</span>
-            <span>${documentCost}</span>
-          </div> */}
 
           <div
             className={`${styles.simulation__costItem} ${styles.simulation__total}`}
