@@ -8,7 +8,7 @@ const Simulation = () => {
   const guaranteeCost = 60393;
   const electronicSignatureCost = 130500;
   //const guaranteeDiscount = -23800; // Descuento por pronto pago
-  const documentCost = -116000; // Descuento por pronto pago
+  const documentCost = 25000; // Tarjeta membresía
 
   const interest = (amount * interestRate * (days / 365)).toFixed(2);
   const total = (
@@ -108,9 +108,15 @@ const Simulation = () => {
             <span>Descuento Aval (Pronto pago)</span>
             <span>${guaranteeDiscount}</span>
           </div> */}
-          <div className={styles.simulation__costItem}>
+
+          <div  className={styles.simulation__costItem}>
             <span>Firma Electrónica</span>
             <span>{formatCurrency(electronicSignatureCost)}</span>
+          </div>
+
+          <div className={styles.simulation__costItem}>
+            <span>Tarjeta de Membresía</span>
+            <span>{formatCurrency(documentCost)}</span>
           </div>
           {/* <div className={styles.simulation__costItem}>
             <span>Documento, Firma Elect (Pronto pago)</span>
