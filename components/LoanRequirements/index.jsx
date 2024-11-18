@@ -56,7 +56,7 @@ const Loan = () => {
           <p>Tasa de interés (siempre por debajo de la tasa de usura)</p>
         </div>
 
-        <h3 className={styles.subtitle}>Opcionalmente, ofrecemos:</h3>
+        <h2 className={styles.subtitle}>Conoce un poco más</h2>
 
         <div className={styles.box_container_blue}>
           <p>
