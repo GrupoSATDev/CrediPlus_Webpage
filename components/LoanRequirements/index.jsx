@@ -56,16 +56,18 @@ const Loan = () => {
           <p>Tasa de interés (siempre por debajo de la tasa de usura)</p>
         </div>
 
-        <h2 className={styles.subtitle}>Conoce un poco más</h2>
+        <h2 className={styles.title}>
+          Preguntas<strong>Frecuentes</strong>
+        </h2>
 
         <div className={styles.box_container_blue}>
           <p>
-            <strong>Firma electrónica / Disponibilidad :</strong> corresponde a las actividades
+            <strong>¿Qué es la Firma electrónica / Disponibilidad?</strong> corresponde a las actividades
             administrativas que están relacionadas con tu crédito y asimismo la Disponibilidad
             que mantendremos para que tu cupo esté siempre disponible.
           </p>
           <p>
-            <strong>Aval:</strong>Este Aval corresponde a los costos de la garantía que se requieren
+            <strong>¿Qué es el Aval?</strong>Este Aval corresponde a los costos de la garantía que se requieren
             para la aprobación de tu crédito dentro de la plataforma.
           </p>
         </div>
