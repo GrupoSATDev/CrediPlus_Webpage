@@ -86,11 +86,7 @@ const Simulation = () => {
               </div>
             </div>
             <p className={styles.note}>
-              Este valor corresponde a una simulación de tu credito segun los
-              datos seleccionados por ti. Recuerda que el{" "}
-              <strong>Aval y la firma electrónica son opcionales</strong> y
-              puedes elegir no incluirlos al momento de firmar tu crédito.
-              <a href="/#"> Más información aquí</a>
+            Este valor corresponde a una simulación de tu credito segun los datos seleccionados por ti. Para mayor información contáctanos por medio de este correo: <a href="mailto:info@crediplus.com.co" target="_blank">info@crediplus.com.co </a>
             </p>
           </div>
           <a href="https://trabajadores.crediplus.com.co/" className={styles.requestNow} target="_blank">Solicítalo Ya</a>
