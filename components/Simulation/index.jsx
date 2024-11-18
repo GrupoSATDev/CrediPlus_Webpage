@@ -86,7 +86,10 @@ const Simulation = () => {
               </div>
             </div>
             <p className={styles.note}>
-            Este valor corresponde a una simulación de tu credito segun los datos seleccionados por ti. Para mayor información contáctanos por medio de este correo: <a href="mailto:info@crediplus.com.co" target="_blank">info@crediplus.com.co </a>
+            Este valor corresponde a una simulación de tu credito segun los datos seleccionados por ti. 
+            Para mayor información contáctanos por medio de este correo: <a href="mailto:info@crediplus.com.co" target="_blank">info@crediplus.com.co.
+            <strong>No se te realizará ningún cobro hasta que hayas realizado uso de tu cupo, sea total o parcialmente.</strong>
+            </a>
             </p>
           </div>
           <a href="https://trabajadores.crediplus.com.co/" className={styles.requestNow} target="_blank">Solicítalo Ya</a>
@@ -103,7 +106,7 @@ const Simulation = () => {
             <span>{formatCurrency(interest)}</span>
           </div>
 
-          <h5 className={styles.optionalCosts}>Costos Opcionales</h5>
+          <h5 className={styles.optionalCosts}>Costos Adicionales</h5>
           <div className={styles.simulation__costItem}>
             <span>Aval</span>
             <span>{formatCurrency(guaranteeCost)}</span>
