@@ -1,16 +1,16 @@
 @import "@/styles/vars.scss";
 
-.main{
+.main {
   margin: 38px 0;
   padding: 34px 0;
-  & li:hover{
-    color:#0B8AFF;
+  & li:hover {
+    color: #0b8aff;
   }
-  hr{
-    background-color: #B0B0B0;
+  hr {
+    background-color: #b0b0b0;
     height: 2px;
   }
-  p{
+  p {
     font-size: 16px;
   }
 }
@@ -22,8 +22,8 @@
   text-align: center;
   display: block;
   span {
-      color: $light-blue;
-    }
+    color: $light-blue;
+  }
 }
 .navbarSlider {
   display: flex;
@@ -56,7 +56,7 @@
   white-space: nowrap;
   text-align: center;
   &.active {
-    color: #0B8AFF;
+    color: #0b8aff;
   }
 }
 
@@ -65,7 +65,7 @@
   border: none;
   font-size: 30px;
   cursor: pointer;
-  color: #B0B0B0;
+  color: #b0b0b0;
 }
 
 .content {
@@ -74,13 +74,13 @@
 }
 
 .textShow {
-    display: block;
-    color: #535353;
-    font-weight: 500;
-    line-height: 24px;
-    text-align: center;
-    cursor: pointer;
-  }
+  display: block;
+  color: #535353;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+}
 
 .text {
   display: none;
@@ -100,8 +100,8 @@
 }
 
 @media (min-width: 992px) {
-  .main{
-    hr{
+  .main {
+    hr {
       height: 3px;
     }
   }
@@ -113,5 +113,15 @@
   }
   .slider {
     gap: 5rem;
+  }
+}
+@media (min-width: 1700px) {
+  .main{
+    p {
+      font-size: 18px;
+    }
+  }
+  .slide {
+    font-size: 24px;
   }
 }
