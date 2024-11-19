@@ -13,6 +13,7 @@
 /* TYPOGRAPHY*/
 body {background:#fff;font-family: $font-primary;line-height: 1;}
 p{font-size: 18px;}
+h2{font-size: 25px;}
 
 /*Tablets until up*/
 @media (min-width: 768px) {
@@ -23,6 +24,7 @@ p{font-size: 18px;}
     .hidden-tablets{display: none !important;}
     .btn{padding: .9rem 1.8rem;}
     .btn-small{font-size: 0.9rem;padding:.4rem 1.5rem;}
+    h2{font-size: 28px;}
 }
 
 /*Laptops until up*/
@@ -30,6 +32,7 @@ p{font-size: 18px;}
     .container{max-width: 60rem;}
     body {font-size: 1rem;}
     .hidden-laptop{display: none !important;}
+    p{font-size: 14px;}
 }
 
 /*Desktops until up*/
@@ -37,6 +40,7 @@ p{font-size: 18px;}
     .container{max-width: 71.25rem;}
     .modal-content{width: 68rem;}
     .modal-small-content{width: 29rem;}
+    h2{font-size: 32px;}
 }
 
 /*Large screens until up*/
@@ -44,9 +48,18 @@ p{font-size: 18px;}
     .container {
       max-width: 78rem;
     }
+    h2{font-size: 34px;}
+    p{font-size: 16px;}
+
 }
 
 /*Extra large screens until up*/
 @media (min-width: 1700px) {
     .container{max-width: 95rem;padding: 0;}
+    h2{font-size: 36px;}
+    p{font-size: 18px;}
+}
+
+@media (min-width: 2000px) {
+    p{font-size: 20px;}
 }

@@ -34,7 +34,7 @@ const countOnUs = () => {
             tu computadora o celular, fácil, rápido y seguro.
           </p>
           <a
-            href="https://trabajadores.crediplus.com.co/"
+            href="https://trabajadores.crediplus.com.co/"  target="_blank"
             className={styles.button}
           >
             Regístrate

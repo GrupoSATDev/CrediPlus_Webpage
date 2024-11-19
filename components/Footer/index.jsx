@@ -119,7 +119,7 @@ const Footer = () => {
             </Accordion>
 
             <a
-              className={styles.button_mobile}
+              className={styles.button_mobile} target="_blank"
               href="https://trabajadores.crediplus.com.co/"
             >
               SOLICITAR PRÉSTAMO
@@ -144,7 +144,7 @@ const Footer = () => {
               </ul>
 
               <a
-                className={styles.button}
+                className={styles.button} target="_blank"
                 href="https://trabajadores.crediplus.com.co/"
               >
                 SOLICITAR PRÉSTAMO
