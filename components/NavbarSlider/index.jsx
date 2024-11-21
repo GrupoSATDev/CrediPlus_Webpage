@@ -32,7 +32,7 @@ const NavbarSlider = () => {
   };
 
   return (
-    <div className="container">
+    <section className="container">
       <div className={styles.main}>
         <h2 className={styles.title}>
           ¡Costos de Usar <span>Crediplus!</span>
@@ -82,7 +82,7 @@ const NavbarSlider = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
