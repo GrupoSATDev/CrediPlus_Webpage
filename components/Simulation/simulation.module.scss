@@ -4,15 +4,14 @@
 .simulation {
   border-radius: 10px;
   font-family: "Inter", sans-serif;
-  margin: 0 20px;
   h2 {
     font-weight: 800;
     font-size: 1.4rem;
     color: black;
     margin-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px;
     text-align: center;
-    font-size: 17px;
+    line-height: 2rem;
   }
   &__form {
     border-radius: 10px;
@@ -67,6 +66,7 @@
       font-weight: 500;
       font-size: 10px;
       color: #000000;
+      text-align: left;
       & strong {
         font-weight: 900;
       }
@@ -80,7 +80,7 @@
       justify-content: space-between;
       margin-bottom: 2rem;
       & span {
-        font-size: 14px;
+        font-size: 16px;
       }
     }
     .totalText {
@@ -98,7 +98,7 @@
     background-color: #ff6600;
     text-align: center;
     color: white;
-    padding: 10px 20px;
+    padding: 1rem;
     cursor: pointer;
     margin-top: 20px;
     font-family: "Inter", sans-serif;
@@ -109,6 +109,7 @@
 
   .requestNow:hover {
     background-color: #e2e0df;
+    color: #ff6600; 
   }
 
   &__costs {
@@ -116,8 +117,9 @@
     background-color: #dbe6f0;
     padding: 20px;
     border-radius: 8px;
-    & h5 {
+    & h4 {
       margin: 0.8rem 0 0.8rem;
+      text-align: left;
     }
   }
 
@@ -133,167 +135,58 @@
     margin-top: 0.8rem;
   }
 }
-@media (min-width: 992px) {
-}
-@media (min-width: 1200px) {
-  .main {
-    background-color: transparent;
-    padding-bottom: 0;
-    position: absolute;
-    top: 6rem;
-    right: 1rem;
-  }
+@media (min-width: 768px) {
   .simulation {
-    width: 470px;
-    margin-bottom: 0;
     & Label {
-      font-size: 12px;
+      font-size: 16px;
     }
     & span {
-      font-size: 12px;
-    }
-    input[type="range"] {
-      margin-bottom: 0;
-    }
-    &__result {
-      margin-top: 0.5rem;
-    }
-    .total {
-      margin-bottom: 1rem;
-    }
+      font-size: 16px;
+    }   
     .note{
-      font-size: 9px;
+      font-size: 12px;
     }
   .requestNow {
-    font-size: 16px;
+    font-size: 20px;
   }
   &__costs{
-    margin-top: 10px;
-    & h5{
+    & span {
+      font-size: 14px;
+    }
+  }
+  .total {
+    & span {
+      font-size: 20px;
+    }
+  }
+}
+}
+@media (min-width: 1200px){
+  .simulation{
+    & Label {
       font-size: 12px;
-      margin: 0;
     }
     & span {
+      font-size: 12px;
+    }
+    & h2{
+      font-size: 16px;
+      padding:  .5rem 0 0 0;
+    }
+    .note{
       font-size: 10px;
     }
-    .optionalCosts{
-      margin:.5rem 0 ;
-    }
-  }
-  &__costItem {
-    margin-bottom: .5rem;
-  }
-  &__total{
-    margin: 0.5rem 0 0 0;
-  }
-  }
-  
-}
-@media (min-width: 1500px) {
-  .main{
-    right: 3rem;
-  }
-  .simulation {
-    width: 550px;
-    & Label {
-      font-size: 14px;
-    }
-    & span {
-      font-size: 14px;
-    }
-    .total {
-      & span {
-        font-size: 16px;
-      }
-    }
-    .note{
-      font-size: 11px;
-    }
-    .requestNow {
-      font-size: 18px;
-    }
     &__costs{
-      & h5{
-        font-size: 16px;
-      }
-      & span {
-        font-size: 12px;
-      }
-    }
-    &__costItem {
-      margin-bottom: .8rem;
+      margin-top: 10px;
     }
   }
-}
-
-@media  (min-width: 1700px) {
-  .main{
-    right: 5rem;
-  }
-  .simulation {
-    width: 600px;
-    & Label {
-      font-size: 16px;
-    }
+  .total {
+    margin-bottom: 1rem !important;
     & span {
-      font-size: 16px;
-    }
-    .total {
-      & span {
-        font-size: 20px;
-      }
-    }
-    .note{
-      font-size: 13px;
-      line-height: 1rem;
-    }
-    &__result {
-      margin-top: 1rem;
-    }
-    &__costs{
-      & h5{
-        font-size: 17px;
-      }
-      & span {
-        font-size: 14px;
-      }
+      font-size: 16px !important;
     }
   }
-}
-
-@media (min-width: 2000px) {
-  .main {
-    right: 7rem;
-  }
-
-  .simulation {
-    width: 700px; 
-    
-    & Label, & span {
-      font-size: 18px;
-    }
-
-    .total & span {
-      font-size: 22px;
-    }
-
-    .note {
-      font-size: 15px;
-      line-height: 1.2rem; 
-    }
-
-    &__result {
-      margin-top: 1.5rem; 
-    }
-
-    &__costs {
-      & h5 {
-        font-size: 19px; 
-      }
-
-      & span {
-        font-size: 16px;
-      }
-    }
+  .requestNow {
+    font-size: 16px;
   }
 }

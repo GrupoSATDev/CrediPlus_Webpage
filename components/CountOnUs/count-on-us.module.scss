@@ -84,6 +84,10 @@
     }
   }
 }
+.button:hover{
+  background-color: $main-color;
+  color: #fff;
+ }
 
 @media (min-width: 992px) {
   .mainContainer {
