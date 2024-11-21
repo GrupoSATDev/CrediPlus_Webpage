@@ -15,7 +15,7 @@ const countOnUs = () => {
         <div className={styles.contentText}>
           <h2>
             <span className={styles.text1}>Cuenta</span>{" "}
-            <span className={styles.text2}>con nosotros</span>
+            <span className={styles.text2}>con Nosotros</span>
           </h2>
           <p>
             Nunca sabes cuándo un imprevisto puede cambiar tus planes. Si te

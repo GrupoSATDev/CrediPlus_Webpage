@@ -13,7 +13,7 @@ const Loan = () => {
     <section className={styles.loan} id='requisitos'>
       <div className="container">
         <h2 className={styles.title}>
-          ¿Qué necesitas para <strong>solicitar un préstamo en línea?</strong>
+          ¿Qué Necesitas para <span>Solicitar un Préstamo en Línea?</span>
         </h2>
         <div className={styles.cards}>
           <ul style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
@@ -57,7 +57,7 @@ const Loan = () => {
         </div>
 
         <h2 className={`${styles.title} ${styles.title2}`}>
-          Preguntas <strong> Frecuentes</strong>
+          Preguntas <span>Frecuentes</span>
         </h2>
 
         <div className={styles.box_container_blue}>

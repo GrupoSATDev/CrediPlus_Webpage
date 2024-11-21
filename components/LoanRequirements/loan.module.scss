@@ -4,6 +4,12 @@
   background-color: #e8e8e8;
   padding: 5rem 0;
   text-align: center;
+  & h2{
+    font-weight: 800;
+  }
+  & span{
+    color: $light-blue;
+}
 }
 
 .container {
@@ -15,7 +21,6 @@
 
 .title {
   font-family: $font-secondary;
-  font-weight: 350;
   line-height: 2rem;
   color: $main-color;
   margin: 0 1rem;
@@ -110,12 +115,6 @@
 }
 
 @media (min-width: 992px) {
-  .title {
-    font-weight: 400;
-    & strong {
-      font-weight: 800;
-    }
-  }
   .cards ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -126,6 +125,17 @@
     min-width: auto;
     background-color: #fff;
     padding: 1rem 2rem;
+  }
+
+  .cards li:hover,
+  .cards li:focus {
+    background-color:$light-blue;
+    & img {
+      filter: brightness(17);
+    }
+    p{
+      color: #fff;
+    }
   }
 
   .cards li p {
