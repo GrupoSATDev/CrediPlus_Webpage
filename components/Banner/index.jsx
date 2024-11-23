@@ -17,9 +17,11 @@ const TopBanner = () => {
             alt="Credi Plus"
             width={620}
           />
-          <a href="https://trabajadores.crediplus.com.co/" passHref target="_blank">
-            <button className={banner.button}>Instalar App</button>
+          <div className={banner.install}>
+          <a href="https://trabajadores.crediplus.com.co/" passHref target="_blank"
+          className={banner.button}>Instalar App
           </a>
+          </div>
           {/* <div className={banner.contentText}> */}
           <p>
             En <strong>Crediplus</strong> cuentas con el crédito en línea{" "}
