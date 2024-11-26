@@ -17,32 +17,12 @@
     margin: 0 2rem 2rem;
   }
   & p {
-    padding: 0 .5rem;
+    padding: 0 .5rem 1rem;    
+    line-height: 24px;
   }
 }
 .main :global(.dCAbUr) {
-  font-weight: 700 !important;
-  font-size: 20px !important;
-  line-height: 25px !important;
   color: #0bd3ff !important;
-}
-.main :global(.liGTMX){
-  color: #0bd3ff !important;
-}
-.main :global(.ACYRQ) {
-  font-weight: 700;
-  font-size: 20px !important;
-  line-height: 25px !important;
-  font-size: 18px !important;
-}
-.main :global(.bhFQAJ) {
-  padding: 1rem 0 !important;
-  line-height: 1.6rem !important;
-  font-weight: 500 !important;
-}
-.main :global(.egHdhy) {
-  border-bottom: solid 2px #fff !important;
-  margin-bottom: 2rem !important;
 }
 .benefits {
   display: grid;
@@ -62,6 +42,12 @@
   & svg {
     stroke: #0bd3ff !important;
   }
+  & h4{
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    line-height: 25px !important;
+    margin: 1rem  0;
+  }
 }
 @media(min-width: 992px) {
   .main{
@@ -75,18 +61,6 @@
     & p{
       font-size: 14px;
     }
-  }
-  .main :global(.ACYRQ) {
-    font-size: 16px !important;
-  }
-  .main :global(.dCAbUr) {
-    font-size: 16px !important;
-  }
-  .main :global(.bhFQAJ) {
-    padding: .5rem 0;
-  }
-  .main :global(.jcMdAU) {
-    margin-bottom: 2rem ;
   }
   .container{
     display: grid;
@@ -105,24 +79,15 @@
       font-size: 16px;
     }
   }
-  .main :global(.ACYRQ) {
-    font-size: 18px !important;
-  }
-  .main :global(.dCAbUr) {
-    font-size: 18px !important;
-  }
 }
 
 @media (min-width: 1700px) {
   .main{
-    p{
+    & p{
       font-size: 18px;
     }
-  }
-  .main :global(.ACYRQ) {
-    font-size: 22px !important;
-  }
-  .main :global(.dCAbUr) {
-    font-size: 22px !important;
+    & h4{
+      font-size: 22px !important;
+    }
   }
 }
