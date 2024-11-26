@@ -1,10 +1,20 @@
 import React, { useState } from "react";
 import styles from "./simulation.module.scss";
 
+function calcularTED(TEA) {
+  return Math.pow(1 + TEA / 100, 1 / 360) - 1;
+}
+
+function calcularIntereses(TEA, dias, monto) {
+  const TED = calcularTED(TEA); // Calcula la Tasa Efectiva Diaria
+  const interes = monto * (Math.pow(1 + TED, dias) - 1); // Calcula los intereses
+  return interes;
+}
+
 const Simulation = () => {
   const [amount, setAmount] = useState(100000);
   const [days, setDays] = useState(30);
-  const interestRate = 0.26; // Ejemplo: 2.75% EA
+  const interestRate = 26; // Ejemplo: 2.75% EA
   const documentCost = 25000; // Tarjeta membresía
 
   // Función para calcular los costos basados en días
@@ -16,10 +26,20 @@ const Simulation = () => {
   };
 
   // Costos según los días
-  const guaranteeCost = calculateCost(days, { 30: 42500, 60: 51500, 90: 60000 });
-  const electronicSignatureCost = calculateCost(days, { 30: 43500, 60: 87000, 90: 130500 });
+  const guaranteeCost = calculateCost(days, {
+    30: 42500,
+    60: 51500,
+    90: 60000,
+  });
+  const electronicSignatureCost = calculateCost(days, {
+    30: 43500,
+    60: 87000,
+    90: 130500,
+  });
 
-  const interest = (amount * interestRate * (days / 365)).toFixed(2);
+  // const interest = (amount * interestRate * (days / 365)).toFixed(2);
+  const interest = calcularIntereses(interestRate, days, amount);
+
   const total = (
     parseFloat(amount) +
     parseFloat(interest) +
@@ -29,7 +49,11 @@ const Simulation = () => {
   ).toFixed(2);
 
   const formatCurrency = (value) => {
-    return parseInt(value).toLocaleString('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0 });
+    return parseInt(value).toLocaleString("es-CO", {
+      style: "currency",
+      currency: "COP",
+      minimumFractionDigits: 0,
+    });
   };
 
   return (
@@ -82,28 +106,46 @@ const Simulation = () => {
                 <span className={styles.totalText}>Total a pagar: </span>
               </div>
               <div>
-                <span className={styles.totalNumber}>{formatCurrency(total)}</span>
+                <span className={styles.totalNumber}>
+                  {formatCurrency(total)}
+                </span>
               </div>
             </div>
             <p className={styles.note}>
-            Este valor corresponde a una simulación de tu credito segun los datos seleccionados por ti. 
-            Para mayor información contáctanos por medio de este correo: <a href="mailto:info@crediplus.com.co" target="_blank">info@crediplus.com.co.
-            <br /> <br />
-            <strong>No se te realizará ningún cobro hasta que hayas realizado uso de tu cupo, sea total o parcialmente.</strong>
-            </a>
+              Este valor corresponde a una simulación de tu credito segun los
+              datos seleccionados por ti. Para mayor información contáctanos por
+              medio de este correo:{" "}
+              <a href="mailto:info@crediplus.com.co" target="_blank">
+                info@crediplus.com.co.
+                <br /> <br />
+                <strong>
+                  No se te realizará ningún cobro hasta que hayas realizado uso
+                  de tu cupo, sea total o parcialmente.
+                </strong>
+              </a>
             </p>
           </div>
-          <a href="https://trabajadores.crediplus.com.co/" className={styles.requestNow} target="_blank">Solicítalo Ya</a>
+          <a
+            href="https://trabajadores.crediplus.com.co/"
+            className={styles.requestNow}
+            target="_blank"
+          >
+            Solicítalo Ya
+          </a>
         </div>
 
         <div className={styles.simulation__costs}>
           <h5>Costos Fijos</h5>
           <div className={styles.simulation__costItem}>
-            <div><span>Monto solicitado</span></div>
-            <div><span>{formatCurrency(amount)}</span></div>
+            <div>
+              <span>Monto solicitado</span>
+            </div>
+            <div>
+              <span>{formatCurrency(amount)}</span>
+            </div>
           </div>
           <div className={styles.simulation__costItem}>
-            <span>Intereses Corrientes ({interestRate * 100}% EA)</span>
+            <span>Intereses Corrientes ({interestRate}% EA)</span>
             <span>{formatCurrency(interest)}</span>
           </div>
 
