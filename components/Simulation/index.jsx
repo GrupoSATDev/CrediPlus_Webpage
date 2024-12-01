@@ -113,7 +113,7 @@ const Simulation = () => {
                 info@crediplus.com.co.
                 <br /> <br />
                 <strong>
-                  No se te realizará ningún cobro hasta que hayas realizado uso
+                  <br /><br />No se te realizará ningún cobro hasta que hayas realizado uso
                   de tu cupo, sea total o parcialmente.
                 </strong>
               </a>
