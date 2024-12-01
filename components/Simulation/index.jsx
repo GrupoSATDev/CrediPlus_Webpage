@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import styles from "./simulation.module.scss";
 
-function calcularTED(TEA) {
-  return Math.pow(1 + TEA / 100, 1 / 360) - 1;
-}
-
-function calcularIntereses(TEA, dias, monto) {
-  const TED = calcularTED(TEA); // Calcula la Tasa Efectiva Diaria
-  const interes = monto * (Math.pow(1 + TED, dias) - 1); // Calcula los intereses
-  return interes;
+function calcularIntereses(dias, monto) {
+  const valueDay = monto * 0.00074;
+  const valueInterest = valueDay * dias;
+  return valueInterest;
 }
 
 const Simulation = () => {
@@ -36,10 +32,8 @@ const Simulation = () => {
     60: 87000,
     90: 130500,
   });
-
-  // const interest = (amount * interestRate * (days / 365)).toFixed(2);
-  const interest = calcularIntereses(interestRate, days, amount);
-
+  
+  const interest = calcularIntereses(days, amount);
   const total = (
     parseFloat(amount) +
     parseFloat(interest) +

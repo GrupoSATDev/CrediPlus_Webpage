@@ -37,7 +37,7 @@ const Footer = () => {
     label: "CONTÁCTANOS",
     links: [
       { href: "mailto:info@crediplus.com.co", text: "info@crediplus.com.co" },
-      { href: "tel:0000000000", text: "000 - 000 - 0000" },
+      { href: "tel:3012523319 ", text: "+57 301 2523319 " },
       { text: "Calle 70B Cra 41 # 187" },
     ],
   };
