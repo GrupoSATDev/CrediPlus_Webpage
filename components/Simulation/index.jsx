@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./simulation.module.scss";
 
 function calcularIntereses(dias, monto) {
-  const valueDay = monto * 0.00074;
+  const valueDay = monto * 0.0066;
   const valueInterest = valueDay * dias;
   return valueInterest;
 }
@@ -10,7 +10,7 @@ function calcularIntereses(dias, monto) {
 const Simulation = () => {
   const [amount, setAmount] = useState(100000);
   const [days, setDays] = useState(30);
-  const interestRate = 27.9; // Ejemplo: 2.75% EA
+  const interestRate = 24; // Ejemplo: 2.75% EA
   const documentCost = 25000; // Tarjeta membresía
 
   // Función para calcular los costos basados en días
