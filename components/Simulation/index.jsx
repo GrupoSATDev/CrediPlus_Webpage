@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./simulation.module.scss";
 
 function calcularIntereses(dias, monto) {
-  const valueDay = monto * 0.0062;
+  const valueDay = monto * 0.00062;
   const valueInterest = valueDay * dias;
   return valueInterest;
 }
