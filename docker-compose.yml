@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  crediplus_landing:
+    build:
+      context: ./
+    container_name: crediplus_landing
+    restart: always
+    ports:
+      - "3086:3000"
